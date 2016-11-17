@@ -16,6 +16,8 @@
 		496505E61DDD62E000689613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496505E41DDD62E000689613 /* LaunchScreen.storyboard */; };
 		496505F11DDD62E100689613 /* CookingSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505F01DDD62E100689613 /* CookingSchedulerTests.swift */; };
 		496505FC1DDD62E100689613 /* CookingSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */; };
+		497664D21DDD7434000A00DA /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497664D11DDD7434000A00DA /* CellView.xib */; };
+		497664D41DDD7467000A00DA /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497664D31DDD7467000A00DA /* CellView.swift */; };
 		E8B8F3C9E747AD49F5979D69 /* Pods_CookingSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5F5E0DA5F38365C20A33BF /* Pods_CookingSchedulerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,8 @@
 		496505F71DDD62E100689613 /* CookingSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingSchedulerUITests.swift; sourceTree = "<group>"; };
 		496505FD1DDD62E100689613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		497664D11DDD7434000A00DA /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		497664D31DDD7467000A00DA /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		6D305DF2E0D9E9BED5DCF815 /* Pods-CookingSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		729FCEF0EB52470F5DE926E5 /* Pods-CookingScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingScheduler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		923146144A43DACFEE68DCE3 /* Pods-CookingScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingScheduler.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,12 +141,10 @@
 		496505DA1DDD62E000689613 /* CookingScheduler */ = {
 			isa = PBXGroup;
 			children = (
-				496505DB1DDD62E000689613 /* AppDelegate.swift */,
-				496505DD1DDD62E000689613 /* ViewController.swift */,
-				496505DF1DDD62E000689613 /* Main.storyboard */,
-				496505E21DDD62E000689613 /* Assets.xcassets */,
-				496505E41DDD62E000689613 /* LaunchScreen.storyboard */,
-				496505E71DDD62E000689613 /* Info.plist */,
+				49C69A271DDD643F00BBE375 /* Support */,
+				49C69A261DDD642400BBE375 /* Views */,
+				49C69A251DDD641E00BBE375 /* Controllers */,
+				49C69A241DDD641800BBE375 /* Models */,
 			);
 			path = CookingScheduler;
 			sourceTree = "<group>";
@@ -163,6 +165,42 @@
 				496505FD1DDD62E100689613 /* Info.plist */,
 			);
 			path = CookingSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		49C69A241DDD641800BBE375 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		49C69A251DDD641E00BBE375 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				496505DB1DDD62E000689613 /* AppDelegate.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		49C69A261DDD642400BBE375 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				496505DD1DDD62E000689613 /* ViewController.swift */,
+				496505DF1DDD62E000689613 /* Main.storyboard */,
+				496505E41DDD62E000689613 /* LaunchScreen.storyboard */,
+				497664D11DDD7434000A00DA /* CellView.xib */,
+				497664D31DDD7467000A00DA /* CellView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		49C69A271DDD643F00BBE375 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				496505E21DDD62E000689613 /* Assets.xcassets */,
+				496505E71DDD62E000689613 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,13 +280,16 @@
 				TargetAttributes = {
 					496505D71DDD62E000689613 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					496505EB1DDD62E100689613 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 496505D71DDD62E000689613;
 					};
 					496505F61DDD62E100689613 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 496505D71DDD62E000689613;
 					};
 				};
@@ -278,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497664D21DDD7434000A00DA /* CellView.xib in Resources */,
 				496505E61DDD62E000689613 /* LaunchScreen.storyboard in Resources */,
 				496505E31DDD62E000689613 /* Assets.xcassets in Resources */,
 				496505E11DDD62E000689613 /* Main.storyboard in Resources */,
@@ -445,6 +487,7 @@
 			files = (
 				496505DE1DDD62E000689613 /* ViewController.swift in Sources */,
 				496505DC1DDD62E000689613 /* AppDelegate.swift in Sources */,
+				497664D41DDD7467000A00DA /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingScheduler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -603,6 +647,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingScheduler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -615,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingSchedulerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingScheduler.app/CookingScheduler";
 			};
 			name = Debug;
@@ -628,6 +674,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingSchedulerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CookingScheduler.app/CookingScheduler";
 			};
 			name = Release;
@@ -640,6 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingSchedulerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CookingScheduler;
 			};
 			name = Debug;
@@ -652,6 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingSchedulerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = CookingScheduler;
 			};
 			name = Release;
@@ -675,6 +724,7 @@
 				496506021DDD62E100689613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		496506031DDD62E100689613 /* Build configuration list for PBXNativeTarget "CookingSchedulerTests" */ = {
 			isa = XCConfigurationList;
@@ -683,6 +733,7 @@
 				496506051DDD62E100689613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		496506061DDD62E100689613 /* Build configuration list for PBXNativeTarget "CookingSchedulerUITests" */ = {
 			isa = XCConfigurationList;
@@ -691,6 +742,7 @@
 				496506081DDD62E100689613 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

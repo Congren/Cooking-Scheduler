@@ -48,15 +48,15 @@
 
 /* Begin PBXFileReference section */
 		023A43A4919F79746B7AD9DACEA2490B /* Pods-CookingSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookingSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		080B5919A82A50344DD51CD47049A000 /* Pods-CookingSchedulerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingSchedulerUITests.modulemap"; sourceTree = "<group>"; };
+		080B5919A82A50344DD51CD47049A000 /* Pods-CookingSchedulerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingSchedulerUITests.modulemap"; sourceTree = "<group>"; };
 		0E309F79FB1A0C1220A37ABF72DFACA1 /* Pods-CookingSchedulerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookingSchedulerUITests-umbrella.h"; sourceTree = "<group>"; };
 		10D6D3BD147092058D197B27195312D5 /* Pods-CookingScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookingScheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		1B36D60F989724C0D2C04E6E322730BA /* Pods-CookingScheduler-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingScheduler-resources.sh"; sourceTree = "<group>"; };
 		1BB7B97CB371E1B3ADA41E4671D765F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DB5B68208F0836A41A932D609B8B0C5 /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
 		20792A8E36E78181D4E95B1552298310 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		256A39DC66F6152199D5EEF52F92B952 /* Pods-CookingSchedulerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingSchedulerTests.modulemap"; sourceTree = "<group>"; };
-		2AF0474658402F5B0A66EA4C93C984DF /* Pods_CookingScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingScheduler.framework; path = "Pods-CookingScheduler.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		256A39DC66F6152199D5EEF52F92B952 /* Pods-CookingSchedulerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingSchedulerTests.modulemap"; sourceTree = "<group>"; };
+		2AF0474658402F5B0A66EA4C93C984DF /* Pods_CookingScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B15BADAA91CF2ECB32FA0D340ACD9A1 /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
 		2B3C53DEE7D550F0E64D258B05215894 /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarEnums.swift; path = Sources/CalendarEnums.swift; sourceTree = "<group>"; };
 		2DB8AC7CD78C55E2BC2CD65DF8C17879 /* Pods-CookingSchedulerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingSchedulerTests-resources.sh"; sourceTree = "<group>"; };
@@ -74,16 +74,16 @@
 		529DA929DBBAC5BF90A641CEE6C334CD /* JTAppleViews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleViews.swift; path = Sources/JTAppleViews.swift; sourceTree = "<group>"; };
 		542C542EA365F39104CE85789A4F0AF4 /* Pods-CookingScheduler-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CookingScheduler-acknowledgements.markdown"; sourceTree = "<group>"; };
 		55E0DA587326D46BA38093EF2E98B601 /* Pods-CookingSchedulerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CookingSchedulerTests-dummy.m"; sourceTree = "<group>"; };
-		587DFDD2E2A5958B92FAA61DDE777D2F /* Pods_CookingSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingSchedulerTests.framework; path = "Pods-CookingSchedulerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		595B8DA5E3168B263A7C33DB897628EC /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		587DFDD2E2A5958B92FAA61DDE777D2F /* Pods_CookingSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		595B8DA5E3168B263A7C33DB897628EC /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
 		652C4514584DC3CB3DAA2075499E9390 /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
 		6A5173393E9957EF640FA4EE4FBB3122 /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
 		6C550C24B1CFE777BFA5A84720447B20 /* Pods-CookingSchedulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookingSchedulerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6FB23EF19B0010E2072DA76899D9F30E /* Pods-CookingSchedulerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingSchedulerUITests-resources.sh"; sourceTree = "<group>"; };
 		70D60C67292C482EC0FFE06D750C4744 /* JTAppleDayCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleDayCell.swift; path = Sources/JTAppleDayCell.swift; sourceTree = "<group>"; };
-		89333244BB4295584481F2315387FA6D /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89333244BB4295584481F2315387FA6D /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE92D2CB25D3892E1C844BB2A176B06 /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C4EAC7B447688BCF251215799FE9404 /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
 		A05104208798316317C95DC9A07EA90E /* JTAppleReusableViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleReusableViewProtocol.swift; path = Sources/JTAppleReusableViewProtocol.swift; sourceTree = "<group>"; };
 		A22AFE7C1AFC8719DC5B3C0D7DECD13A /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D1A045FF086C54E3DFE5BA9FA0331A8D /* Pods-CookingSchedulerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CookingSchedulerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D4C49E101CC7546A8D739ACDAF7778D9 /* Pods-CookingSchedulerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingSchedulerTests-frameworks.sh"; sourceTree = "<group>"; };
-		F68548E9639273E179A911B4CBC1A470 /* Pods-CookingScheduler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingScheduler.modulemap"; sourceTree = "<group>"; };
+		F68548E9639273E179A911B4CBC1A470 /* Pods-CookingScheduler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingScheduler.modulemap"; sourceTree = "<group>"; };
 		F6F3C322F39303FFFB8B09BB4DA85CF3 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
-		FA3DD7BA5271FDE42176D9967E7A3274 /* Pods_CookingSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingSchedulerUITests.framework; path = "Pods-CookingSchedulerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3DD7BA5271FDE42176D9967E7A3274 /* Pods_CookingSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABC54977882EC55B9B56012EC5ED64A /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTCalendarProtocols.swift; path = Sources/JTCalendarProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,7 +188,6 @@
 				8CE92D2CB25D3892E1C844BB2A176B06 /* UserInteractionFunctions.swift */,
 				CB3E2E78765487219294759EA4DD02D0 /* Support Files */,
 			);
-			name = JTAppleCalendar;
 			path = JTAppleCalendar;
 			sourceTree = "<group>";
 		};
@@ -405,6 +404,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					9B22756F1BC69AB282A6C7FFC7EB05C3 = {
+						LastSwiftMigration = 0810;
+					};
+					AC93C251C7BA2CD82108EC8CBE73D498 = {
+						LastSwiftMigration = 0810;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -512,6 +519,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -591,6 +599,7 @@
 				PRODUCT_NAME = Pods_CookingScheduler;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -697,6 +706,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -728,6 +738,7 @@
 				PRODUCT_NAME = JTAppleCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
