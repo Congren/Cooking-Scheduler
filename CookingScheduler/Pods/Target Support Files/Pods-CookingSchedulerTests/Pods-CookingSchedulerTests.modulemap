@@ -1,0 +1,6 @@
+framework module Pods_CookingSchedulerTests {
+  umbrella header "Pods-CookingSchedulerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

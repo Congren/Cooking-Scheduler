@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B7220491E9F7FA64395F486 /* Pods_CookingScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52A4367811BB41F5DC66D14 /* Pods_CookingScheduler.framework */; };
+		2E96D31F68938FC9DF92B84E /* Pods_CookingSchedulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9A57B289013EB0E0457788 /* Pods_CookingSchedulerTests.framework */; };
 		496505DC1DDD62E000689613 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505DB1DDD62E000689613 /* AppDelegate.swift */; };
 		496505DE1DDD62E000689613 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505DD1DDD62E000689613 /* ViewController.swift */; };
 		496505E11DDD62E000689613 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496505DF1DDD62E000689613 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		496505E61DDD62E000689613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496505E41DDD62E000689613 /* LaunchScreen.storyboard */; };
 		496505F11DDD62E100689613 /* CookingSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505F01DDD62E100689613 /* CookingSchedulerTests.swift */; };
 		496505FC1DDD62E100689613 /* CookingSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */; };
+		E8B8F3C9E747AD49F5979D69 /* Pods_CookingSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5F5E0DA5F38365C20A33BF /* Pods_CookingSchedulerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FBA876000EE3E4F49327590 /* Pods-CookingSchedulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		452D1347A8C5C8B14EC988B5 /* Pods-CookingSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
 		496505D81DDD62E000689613 /* CookingScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496505DB1DDD62E000689613 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		496505DD1DDD62E000689613 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,13 @@
 		496505F71DDD62E100689613 /* CookingSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingSchedulerUITests.swift; sourceTree = "<group>"; };
 		496505FD1DDD62E100689613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D305DF2E0D9E9BED5DCF815 /* Pods-CookingSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		729FCEF0EB52470F5DE926E5 /* Pods-CookingScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingScheduler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler.debug.xcconfig"; sourceTree = "<group>"; };
+		923146144A43DACFEE68DCE3 /* Pods-CookingScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingScheduler.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler.release.xcconfig"; sourceTree = "<group>"; };
+		9E9A57B289013EB0E0457788 /* Pods_CookingSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE7CB4846E8F13CF745BD59 /* Pods-CookingSchedulerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE5F5E0DA5F38365C20A33BF /* Pods_CookingSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52A4367811BB41F5DC66D14 /* Pods_CookingScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B7220491E9F7FA64395F486 /* Pods_CookingScheduler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E96D31F68938FC9DF92B84E /* Pods_CookingSchedulerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B8F3C9E747AD49F5979D69 /* Pods_CookingSchedulerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006CD015AEBF0B1FE8937E1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				729FCEF0EB52470F5DE926E5 /* Pods-CookingScheduler.debug.xcconfig */,
+				923146144A43DACFEE68DCE3 /* Pods-CookingScheduler.release.xcconfig */,
+				2FBA876000EE3E4F49327590 /* Pods-CookingSchedulerTests.debug.xcconfig */,
+				452D1347A8C5C8B14EC988B5 /* Pods-CookingSchedulerTests.release.xcconfig */,
+				6D305DF2E0D9E9BED5DCF815 /* Pods-CookingSchedulerUITests.debug.xcconfig */,
+				9FE7CB4846E8F13CF745BD59 /* Pods-CookingSchedulerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		05D1A05D398579F06E2AAF03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C52A4367811BB41F5DC66D14 /* Pods_CookingScheduler.framework */,
+				9E9A57B289013EB0E0457788 /* Pods_CookingSchedulerTests.framework */,
+				BE5F5E0DA5F38365C20A33BF /* Pods_CookingSchedulerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		496505CF1DDD62E000689613 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				496505EF1DDD62E100689613 /* CookingSchedulerTests */,
 				496505FA1DDD62E100689613 /* CookingSchedulerUITests */,
 				496505D91DDD62E000689613 /* Products */,
+				006CD015AEBF0B1FE8937E1F /* Pods */,
+				05D1A05D398579F06E2AAF03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496506001DDD62E100689613 /* Build configuration list for PBXNativeTarget "CookingScheduler" */;
 			buildPhases = (
+				F447D61F01DBDD84148D2577 /* [CP] Check Pods Manifest.lock */,
 				496505D41DDD62E000689613 /* Sources */,
 				496505D51DDD62E000689613 /* Frameworks */,
 				496505D61DDD62E000689613 /* Resources */,
+				1ECF9EFEC46BC482F2A3FDB2 /* [CP] Embed Pods Frameworks */,
+				906CA980DD6158C1AFE236C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496506031DDD62E100689613 /* Build configuration list for PBXNativeTarget "CookingSchedulerTests" */;
 			buildPhases = (
+				D587AEE2FD9C67474B4B79C3 /* [CP] Check Pods Manifest.lock */,
 				496505E81DDD62E100689613 /* Sources */,
 				496505E91DDD62E100689613 /* Frameworks */,
 				496505EA1DDD62E100689613 /* Resources */,
+				27F01734189B94785E1CE121 /* [CP] Embed Pods Frameworks */,
+				722A3E0F8758BCA6F41F5056 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 496506061DDD62E100689613 /* Build configuration list for PBXNativeTarget "CookingSchedulerUITests" */;
 			buildPhases = (
+				5FA600389453CD24F36CF218 /* [CP] Check Pods Manifest.lock */,
 				496505F31DDD62E100689613 /* Sources */,
 				496505F41DDD62E100689613 /* Frameworks */,
 				496505F51DDD62E100689613 /* Resources */,
+				C54C881FCC90738A548C10D6 /* [CP] Embed Pods Frameworks */,
+				F84D1B74F949F1F58A04F8E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +299,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ECF9EFEC46BC482F2A3FDB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27F01734189B94785E1CE121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA600389453CD24F36CF218 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		722A3E0F8758BCA6F41F5056 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906CA980DD6158C1AFE236C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingScheduler/Pods-CookingScheduler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C54C881FCC90738A548C10D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D587AEE2FD9C67474B4B79C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F447D61F01DBDD84148D2577 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F84D1B74F949F1F58A04F8E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		496505D41DDD62E000689613 /* Sources */ = {
@@ -397,6 +584,7 @@
 		};
 		496506011DDD62E100689613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 729FCEF0EB52470F5DE926E5 /* Pods-CookingScheduler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CookingScheduler/Info.plist;
@@ -408,6 +596,7 @@
 		};
 		496506021DDD62E100689613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 923146144A43DACFEE68DCE3 /* Pods-CookingScheduler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CookingScheduler/Info.plist;
@@ -419,6 +608,7 @@
 		};
 		496506041DDD62E100689613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FBA876000EE3E4F49327590 /* Pods-CookingSchedulerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CookingSchedulerTests/Info.plist;
@@ -431,6 +621,7 @@
 		};
 		496506051DDD62E100689613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452D1347A8C5C8B14EC988B5 /* Pods-CookingSchedulerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CookingSchedulerTests/Info.plist;
@@ -443,6 +634,7 @@
 		};
 		496506071DDD62E100689613 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D305DF2E0D9E9BED5DCF815 /* Pods-CookingSchedulerUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CookingSchedulerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -454,6 +646,7 @@
 		};
 		496506081DDD62E100689613 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE7CB4846E8F13CF745BD59 /* Pods-CookingSchedulerUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CookingSchedulerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
