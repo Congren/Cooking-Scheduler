@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+
 extension UIColor {
     convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
         self.init(
