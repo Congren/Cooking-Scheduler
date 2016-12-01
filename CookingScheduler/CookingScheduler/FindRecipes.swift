@@ -30,7 +30,8 @@ class FindRecipe {
                 completion(data as NSData?)
                 return
             }
-            print(data)
+            print(response)
+            print(data!)
             completion(data as NSData?)
         }
         

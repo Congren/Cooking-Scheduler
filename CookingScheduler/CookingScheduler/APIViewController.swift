@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol DataFromAPI {
+    func dataReceived(data:NSArray)
+}
+
 class APIViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ingredientField: UITextField!
+    var delegate:DataFromAPI? = nil
     var ingredients: [String] = []
     let apiClient = FindRecipe()
     let recipeParser = RecipeParser()
@@ -29,7 +34,13 @@ class APIViewController: UIViewController, UITextFieldDelegate {
     @IBAction func makeCall(_ sender: Any) {
         apiClient.getRecipe(ingredients: ingredients as NSArray) { (data) in
             let json = self.recipeParser.parseDictionary(data: data)
+            print("json: ")
             print(json ?? "Did not work")
+            print(self.delegate)
+            if (self.delegate != nil) {
+                
+                self.delegate!.dataReceived(data: json!)
+            }
         }
     }
     
@@ -40,14 +51,18 @@ class APIViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "RecipeTableViewSegue") {
+            let rtv:RecipesTableViewController = segue.destination as! RecipesTableViewController
+            
+            self.delegate = rtv
+        }
     }
-    */
 
 }
