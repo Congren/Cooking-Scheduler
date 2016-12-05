@@ -143,6 +143,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SJf-H5-gb5" kind="show" identifier="RecipeDetails" id="WUj-ce-3QP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -155,6 +158,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HFW-vQ-11y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2332" y="-52.623688155922046"/>
+        </scene>
+        <!--Recipe Details View Controller-->
+        <scene sceneID="FM9-Tm-DYI">
+            <objects>
+                <viewController id="SJf-H5-gb5" customClass="RecipeDetailsViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="90A-ih-9PX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZv-Kd-YcP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wsc-bL-m8e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl1-L8-Paa">
+                                <rect key="frame" x="-0.5" y="123" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAB-yH-UBx">
+                                <rect key="frame" x="-0.5" y="292" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZAB-yH-UBx" firstAttribute="width" secondItem="wsc-bL-m8e" secondAttribute="width" id="4pr-aq-wbF"/>
+                            <constraint firstItem="Fl1-L8-Paa" firstAttribute="centerX" secondItem="wsc-bL-m8e" secondAttribute="centerX" id="DkT-wJ-ZkL"/>
+                            <constraint firstItem="Fl1-L8-Paa" firstAttribute="width" secondItem="wsc-bL-m8e" secondAttribute="width" id="IRm-EN-meo"/>
+                            <constraint firstItem="ZAB-yH-UBx" firstAttribute="centerX" secondItem="wsc-bL-m8e" secondAttribute="centerX" id="ZTj-RL-Zoi"/>
+                            <constraint firstItem="Fl1-L8-Paa" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="59" id="jKc-Sy-nUB"/>
+                            <constraint firstItem="ZAB-yH-UBx" firstAttribute="top" secondItem="Fl1-L8-Paa" secondAttribute="bottom" constant="148" id="yCC-t4-drj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="instructionsLabel" destination="ZAB-yH-UBx" id="kSn-nb-wBY"/>
+                        <outlet property="titleLabel" destination="Fl1-L8-Paa" id="eLk-bq-In8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szH-8S-gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3150" y="-89"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="29j-5F-5nf">

@@ -34,11 +34,7 @@ class APIViewController: UIViewController, UITextFieldDelegate {
     @IBAction func makeCall(_ sender: Any) {
         apiClient.getRecipe(ingredients: ingredients as NSArray) { (data) in
             let json = self.recipeParser.parseDictionary(data: data)
-            print("json: ")
-            print(json ?? "Did not work")
-            print(self.delegate)
             if (self.delegate != nil) {
-                
                 self.delegate!.dataReceived(data: json!)
             }
         }

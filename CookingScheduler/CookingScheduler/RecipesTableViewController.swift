@@ -8,11 +8,18 @@
 
 import UIKit
 typealias JSONDictionary = [String: AnyObject]
-
+protocol RecipeDetailProtocol {
+    func setRecipeDetails(details: RecipeDetails)
+}
 
 class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     var recipes:[Recipe] = []
+    var selectedRecipe: Recipe? = nil
+    let apiClient = FindRecipe()
+    let recipeParser = RecipeParser()
+    var delegate:RecipeDetailProtocol? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
@@ -55,6 +62,11 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedRecipe = self.recipes[indexPath.row]
+        self.performSegue(withIdentifier: "RecipeDetails", sender: self)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,14 +103,23 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "RecipeDetails") {
+            let rdvc:RecipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+            rdvc.recipe = self.selectedRecipe
+            self.delegate = rdvc
+            apiClient.getRecipeDetails(id: (self.selectedRecipe?.id)!) { (data) in
+                rdvc.recipeDetails = self.recipeParser.parseDetails(data: data)
+                print(rdvc.recipeDetails?.ingredients ?? "Did not work")
+            }
+
+        }
     }
-    */
+
 
 }
