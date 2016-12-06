@@ -12,10 +12,15 @@ protocol DataFromAPI {
     func dataReceived(data:NSArray)
 }
 
+protocol EnteredIngredients {
+    func getIngredients(data: NSArray)
+}
+
 class APIViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var ingredientField: UITextField!
     var delegate:DataFromAPI? = nil
+    var iDelegate:EnteredIngredients? = nil
     var ingredients: [String] = []
     let apiClient = FindRecipe()
     let recipeParser = RecipeParser()
@@ -37,13 +42,15 @@ class APIViewController: UIViewController, UITextFieldDelegate {
             if (self.delegate != nil) {
                 self.delegate!.dataReceived(data: json!)
             }
+            if(self.iDelegate != nil) {
+                self.iDelegate?.getIngredients(data: self.ingredients as NSArray)
+            }
         }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         ingredients.append(textField.text!)
         textField.text = ""
-        print(ingredients)
         return true
     }
     
@@ -56,8 +63,8 @@ class APIViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "RecipeTableViewSegue") {
             let rtv:RecipesTableViewController = segue.destination as! RecipesTableViewController
-            
             self.delegate = rtv
+            rtv.ingredients = self.ingredients
         }
     }
 

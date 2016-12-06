@@ -15,6 +15,7 @@ protocol RecipeDetailProtocol {
 class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     var recipes:[Recipe] = []
+    var ingredients:[String] = []
     var selectedRecipe: Recipe? = nil
     let apiClient = FindRecipe()
     let recipeParser = RecipeParser()
@@ -38,6 +39,7 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     func dataReceived(data: NSArray) {
         self.recipes = data as! [Recipe]
+        print(self.recipes.count)
         self.tableView.reloadData()
     }
     
@@ -59,7 +61,6 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
         cell.titleLabel?.text = self.recipes[indexPath.row].title
         cell.likeLabel?.text = String(self.recipes[indexPath.row].likes)
         // Configure the cell...
-
         return cell
     }
     
@@ -67,7 +68,7 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
         self.selectedRecipe = self.recipes[indexPath.row]
         self.performSegue(withIdentifier: "RecipeDetails", sender: self)
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -113,9 +114,12 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
             let rdvc:RecipeDetailsViewController = segue.destination as! RecipeDetailsViewController
             rdvc.recipe = self.selectedRecipe
             self.delegate = rdvc
+            rdvc.ingredients = self.ingredients
             apiClient.getRecipeDetails(id: (self.selectedRecipe?.id)!) { (data) in
                 rdvc.recipeDetails = self.recipeParser.parseDetails(data: data)
-                print(rdvc.recipeDetails?.ingredients ?? "Did not work")
+                if (self.delegate != nil) {
+                    self.delegate!.setRecipeDetails(details: rdvc.recipeDetails!)
+                }
             }
 
         }

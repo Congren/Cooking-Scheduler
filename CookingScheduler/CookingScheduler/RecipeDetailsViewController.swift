@@ -11,6 +11,8 @@ import UIKit
 class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
+    var ingredients:[String] = []
+    var groceryList:GroceryList? = nil
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
     
@@ -29,18 +31,27 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         DispatchQueue.main.async {
             self.instructionsLabel.text = self.recipeDetails?.instructions
         }
-        print(self.recipeDetails?.ingredients ?? "No Ingredients")
-        print(self.recipeDetails?.instructions ?? "No Instructions")
+        groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)!)
+        let neededIngredients = groceryList?.compareIngredients()
+        print(neededIngredients ?? "Did not work")
+//        print(self.recipeDetails?.ingredients ?? "No Ingredients")
+//        print(type(of:self.recipeDetails?.instructions))
+//        print(self.recipeDetails ?? "No Recipe")
+//        print(self.recipeDetails?.instructions ?? "No Instructions")
     }
+    
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "ToGroceryList") {
+            let gvc:GroceryViewController = segue.destination as! GroceryViewController
+            gvc.groceryList = groceryList
+        }
     }
-    */
+
 
 }

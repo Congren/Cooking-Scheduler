@@ -183,14 +183,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2O-ZP-tWc">
+                                <rect key="frame" x="278" y="72" width="64" height="30"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <segue destination="diU-UE-7Kh" kind="show" identifier="ToGroceryList" id="bdG-2F-jB6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZAB-yH-UBx" firstAttribute="width" secondItem="wsc-bL-m8e" secondAttribute="width" id="4pr-aq-wbF"/>
                             <constraint firstItem="Fl1-L8-Paa" firstAttribute="centerX" secondItem="wsc-bL-m8e" secondAttribute="centerX" id="DkT-wJ-ZkL"/>
                             <constraint firstItem="Fl1-L8-Paa" firstAttribute="width" secondItem="wsc-bL-m8e" secondAttribute="width" id="IRm-EN-meo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H2O-ZP-tWc" secondAttribute="trailing" constant="17" id="Ynj-YR-jJR"/>
                             <constraint firstItem="ZAB-yH-UBx" firstAttribute="centerX" secondItem="wsc-bL-m8e" secondAttribute="centerX" id="ZTj-RL-Zoi"/>
                             <constraint firstItem="Fl1-L8-Paa" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="59" id="jKc-Sy-nUB"/>
+                            <constraint firstItem="H2O-ZP-tWc" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="8" id="mM3-UM-ISw"/>
                             <constraint firstItem="ZAB-yH-UBx" firstAttribute="top" secondItem="Fl1-L8-Paa" secondAttribute="bottom" constant="148" id="yCC-t4-drj"/>
                         </constraints>
                     </view>
@@ -201,7 +210,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szH-8S-gjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3150" y="-89"/>
+            <point key="canvasLocation" x="3149.5999999999999" y="-89.505247376311857"/>
+        </scene>
+        <!--Grocery View Controller-->
+        <scene sceneID="KpX-Bt-1Ud">
+            <objects>
+                <viewController id="diU-UE-7Kh" customClass="GroceryViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DdR-uA-TxJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HF7-An-BC6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bsc-G5-bg9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7O-7P-R4H">
+                                <rect key="frame" x="-0.5" y="178" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L7O-7P-R4H" firstAttribute="centerX" secondItem="Bsc-G5-bg9" secondAttribute="centerX" id="Mfx-Q2-BT4"/>
+                            <constraint firstItem="L7O-7P-R4H" firstAttribute="top" secondItem="DdR-uA-TxJ" secondAttribute="bottom" constant="114" id="WEf-nC-NZs"/>
+                            <constraint firstItem="L7O-7P-R4H" firstAttribute="width" secondItem="Bsc-G5-bg9" secondAttribute="width" id="ahh-qC-rxH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ingredientListLabel" destination="L7O-7P-R4H" id="Zz5-b7-V6W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rFY-rL-jJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3996" y="-133"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="29j-5F-5nf">
