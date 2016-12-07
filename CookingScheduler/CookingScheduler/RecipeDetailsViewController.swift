@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol GroceryListData {
+    func getGroceryList(data: GroceryList)
+}
+
 class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
     var ingredients:[String] = []
     var groceryList:GroceryList? = nil
+    var delegate:GroceryListData? = nil
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
     
@@ -49,7 +54,8 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "ToGroceryList") {
             let gvc:GroceryViewController = segue.destination as! GroceryViewController
-            gvc.groceryList = groceryList
+            self.delegate = gvc
+            self.delegate?.getGroceryList(data: self.groceryList!)
         }
     }
 

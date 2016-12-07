@@ -187,7 +187,7 @@
                                 <rect key="frame" x="278" y="72" width="64" height="30"/>
                                 <state key="normal" title="Generate"/>
                                 <connections>
-                                    <segue destination="diU-UE-7Kh" kind="show" identifier="ToGroceryList" id="bdG-2F-jB6"/>
+                                    <segue destination="x3K-Ef-24M" kind="show" identifier="ToGroceryList" id="cwg-vz-Q0I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,38 +213,32 @@
             <point key="canvasLocation" x="3149.5999999999999" y="-89.505247376311857"/>
         </scene>
         <!--Grocery View Controller-->
-        <scene sceneID="KpX-Bt-1Ud">
+        <scene sceneID="tRx-kB-r4F">
             <objects>
-                <viewController id="diU-UE-7Kh" customClass="GroceryViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DdR-uA-TxJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="HF7-An-BC6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bsc-G5-bg9">
+                <tableViewController id="x3K-Ef-24M" customClass="GroceryViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2h3-Gm-rk3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7O-7P-R4H">
-                                <rect key="frame" x="-0.5" y="178" width="375" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="L7O-7P-R4H" firstAttribute="centerX" secondItem="Bsc-G5-bg9" secondAttribute="centerX" id="Mfx-Q2-BT4"/>
-                            <constraint firstItem="L7O-7P-R4H" firstAttribute="top" secondItem="DdR-uA-TxJ" secondAttribute="bottom" constant="114" id="WEf-nC-NZs"/>
-                            <constraint firstItem="L7O-7P-R4H" firstAttribute="width" secondItem="Bsc-G5-bg9" secondAttribute="width" id="ahh-qC-rxH"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="ingredientListLabel" destination="L7O-7P-R4H" id="Zz5-b7-V6W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rFY-rL-jJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="WnE-eM-a3U">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WnE-eM-a3U" id="4Fa-R6-aLO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x3K-Ef-24M" id="y2P-Mr-Zxw"/>
+                            <outlet property="delegate" destination="x3K-Ef-24M" id="GRY-lF-Te6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBa-yY-tUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3996" y="-133"/>
+            <point key="canvasLocation" x="4104" y="-103"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="29j-5F-5nf">

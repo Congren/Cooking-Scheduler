@@ -8,12 +8,13 @@
 
 import UIKit
 
-class GroceryViewController: UIViewController {
-    @IBOutlet weak var ingredientListLabel: UILabel!
-    var groceryList:GroceryList? = nil
+class GroceryViewController: UITableViewController, GroceryListData {
+
+    var groceryList:GroceryList? = GroceryList(ingredientsOwned: [], recipeIngredients: [])
     override func viewDidLoad() {
         super.viewDidLoad()
-        ingredientListLabel.text = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
+        self.tableView.register(UINib(nibName: "GroceryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+      //  ingredientListLabel.text = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +23,25 @@ class GroceryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func getGroceryList(data: GroceryList) {
+        self.groceryList = data
+        self.tableView.reloadData()
+    }
+    
+    // MARK: Table View
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (groceryList?.neededIngredients.count)!
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GroceryTableViewCell
+        cell.nameLabel?.text = self.groceryList?.neededIngredients[indexPath.row].name
+        return cell
+    }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        performSegueWithIdentifier("toDetailVC", sender: indexPath)
+//    }
 
     /*
     // MARK: - Navigation

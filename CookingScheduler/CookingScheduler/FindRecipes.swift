@@ -12,7 +12,7 @@ class FindRecipe {
     func getRecipe(ingredients: NSArray, completion: @escaping (NSData?) -> Void){
         let numReplies = 1
         let ingredientsStr = makeString(array: ingredients)
-        let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=\(ingredientsStr)&limitLicense=false&number=5&ranking=1"
+        let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=\(ingredientsStr)&limitLicense=false&number=20&ranking=1"
         guard let url = NSURL(string: urlString) else {
             print("Error: couldn't create URL from string")
             completion(nil)
