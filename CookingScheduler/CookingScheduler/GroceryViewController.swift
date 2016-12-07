@@ -9,8 +9,8 @@
 import UIKit
 
 class GroceryViewController: UIViewController {
-    @IBOutlet weak var ingredientListLabel: UILabel!
     var groceryList:GroceryList? = nil
+    @IBOutlet weak var ingredientListLabel: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientListLabel.text = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")

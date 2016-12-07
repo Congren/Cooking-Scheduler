@@ -14,7 +14,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var ingredients:[String] = []
     var groceryList:GroceryList? = nil
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,21 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     
     func setRecipeDetails(details: RecipeDetails) {
         DispatchQueue.main.async {
-            self.instructionsLabel.text = self.recipeDetails?.instructions
+            print(self.recipeDetails?.instructions)
+            var temp = ""
+            let paragraphs = self.recipeDetails?.instructions
+            for s in paragraphs!.characters{
+                if temp == ""{
+                    temp+=String(s)
+                }else if temp.characters.last == " "{
+                    if s != " "{
+                        temp+=String(s)
+                    }
+                }else{
+                    temp+=String(s)
+                }
+            }
+            self.instructionsLabel.text = temp
         }
         groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)!)
         let neededIngredients = groceryList?.compareIngredients()
