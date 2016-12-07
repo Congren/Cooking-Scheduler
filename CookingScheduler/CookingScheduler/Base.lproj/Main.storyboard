@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u3T-TX-bPB">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u3T-TX-bPB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -209,9 +209,6 @@
                                 <state key="normal" title="Ingredients">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="x3K-Ef-24M" kind="show" identifier="ToGroceryList" id="cwg-vz-Q0I"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No Data Currently Available." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="38g-dg-Hif">
                                 <rect key="frame" x="16" y="169" width="343" height="449"/>
@@ -255,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ingredients" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NTw-Ci-U57">
-                                <rect key="frame" x="85" y="182" width="206" height="185"/>
+                                <rect key="frame" x="85" y="138" width="206" height="278"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -301,7 +298,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WyJ-vV-67g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" id="RRo-tm-VJp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AuM-eF-6qG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AuM-eF-6qG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
