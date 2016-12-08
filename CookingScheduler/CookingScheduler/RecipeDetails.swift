@@ -15,4 +15,5 @@ struct RecipeDetails {
     let instructions: String
     let ingredients: [Ingredient]
     let cuisines: [String]
+    let url: String
 }
