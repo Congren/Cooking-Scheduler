@@ -6,6 +6,7 @@ target 'CookingScheduler' do
   use_frameworks!
   pod 'JTAppleCalendar', '~> 6.0'
   pod 'ImageLoader'
+  pod "PTPopupWebView"
 
   # Pods for CookingScheduler
 

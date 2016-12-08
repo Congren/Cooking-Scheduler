@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PTPopupWebView
 
 protocol GroceryListData {
     func getGroceryList(data: GroceryList)
@@ -32,6 +33,13 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func viewWebPage(_ sender: Any) {
+        let popupvc = PTPopupWebViewController()
+        print(self.recipeDetails?.url ?? "No")
+        popupvc.popupView.URL(string:(self.recipeDetails?.url)!)
+        popupvc.show()
+    }
+    
     func setRecipeDetails(details: RecipeDetails) {
         DispatchQueue.main.async {
             var temp = ""
@@ -52,10 +60,6 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! as! [Ingredient])
         let neededIngredients = groceryList?.compareIngredients()
         print(neededIngredients ?? "Did not work")
-//        print(self.recipeDetails?.ingredients ?? "No Ingredients")
-//        print(type(of:self.recipeDetails?.instructions))
-//        print(self.recipeDetails ?? "No Recipe")
-//        print(self.recipeDetails?.instructions ?? "No Instructions")
     }
     
 
