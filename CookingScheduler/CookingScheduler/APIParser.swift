@@ -51,7 +51,7 @@ class RecipeParser {
     func getIngredient(info: Dictionary<String, Any>) -> Ingredient? {
         if let id = info["id"] as? Int,
             let name = info["name"] as? String {
-            return Ingredient(id:id, name:name)
+            return Ingredient(id:id, name:name, notes: nil)
         }
         return nil
     }

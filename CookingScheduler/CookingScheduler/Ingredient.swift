@@ -11,5 +11,5 @@ import Foundation
 struct Ingredient {
     let id: Int?
     let name: String
-    let notes: String? = nil
+    var notes: String? = nil
 }

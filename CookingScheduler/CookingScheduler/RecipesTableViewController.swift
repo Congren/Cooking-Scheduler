@@ -24,7 +24,7 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0);
+        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

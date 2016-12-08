@@ -34,7 +34,6 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     
     func setRecipeDetails(details: RecipeDetails) {
         DispatchQueue.main.async {
-            print(self.recipeDetails?.instructions)
             var temp = ""
             let paragraphs = self.recipeDetails?.instructions
             for s in paragraphs!.characters{
