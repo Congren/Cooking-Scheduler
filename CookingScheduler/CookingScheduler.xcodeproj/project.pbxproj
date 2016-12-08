@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0B7220491E9F7FA64395F486 /* Pods_CookingScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52A4367811BB41F5DC66D14 /* Pods_CookingScheduler.framework */; };
 		2E96D31F68938FC9DF92B84E /* Pods_CookingSchedulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9A57B289013EB0E0457788 /* Pods_CookingSchedulerTests.framework */; };
+		49134FC61DF91E7400CB78DE /* OverviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49134FC51DF91E7400CB78DE /* OverviewView.xib */; };
+		49134FC81DF91F8400CB78DE /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49134FC71DF91F8400CB78DE /* OverviewView.swift */; };
+		49134FCA1DF9224D00CB78DE /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49134FC91DF9224D00CB78DE /* OverviewViewController.swift */; };
 		494BD2EF1DF88AA7007635F7 /* APIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BD2ED1DF88AA7007635F7 /* APIParser.swift */; };
 		494BD2F01DF88AA7007635F7 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BD2EE1DF88AA7007635F7 /* APIViewController.swift */; };
 		494BD2F41DF88AB1007635F7 /* FindRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494BD2F11DF88AB1007635F7 /* FindRecipes.swift */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		2FBA876000EE3E4F49327590 /* Pods-CookingSchedulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		452D1347A8C5C8B14EC988B5 /* Pods-CookingSchedulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerTests/Pods-CookingSchedulerTests.release.xcconfig"; sourceTree = "<group>"; };
+		49134FC51DF91E7400CB78DE /* OverviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewView.xib; sourceTree = "<group>"; };
+		49134FC71DF91F8400CB78DE /* OverviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		49134FC91DF9224D00CB78DE /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		494BD2ED1DF88AA7007635F7 /* APIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParser.swift; sourceTree = "<group>"; };
 		494BD2EE1DF88AA7007635F7 /* APIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
 		494BD2F11DF88AB1007635F7 /* FindRecipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRecipes.swift; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 				496505DB1DDD62E000689613 /* AppDelegate.swift */,
 				494BD2FB1DF88ABA007635F7 /* RecipesTableViewController.swift */,
 				494BD2EE1DF88AA7007635F7 /* APIViewController.swift */,
+				49134FC91DF9224D00CB78DE /* OverviewViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +235,8 @@
 				496505DD1DDD62E000689613 /* ViewController.swift */,
 				496505DF1DDD62E000689613 /* Main.storyboard */,
 				496505E41DDD62E000689613 /* LaunchScreen.storyboard */,
+				49134FC71DF91F8400CB78DE /* OverviewView.swift */,
+				49134FC51DF91E7400CB78DE /* OverviewView.xib */,
 				494BD3051DF88ABF007635F7 /* RecipeTableViewCell.xib */,
 				494BD2FD1DF88ABA007635F7 /* RecipeTableViewCell.swift */,
 				497664D11DDD7434000A00DA /* CellView.xib */,
@@ -366,6 +375,7 @@
 				496505E31DDD62E000689613 /* Assets.xcassets in Resources */,
 				494BD3061DF88ABF007635F7 /* RecipeTableViewCell.xib in Resources */,
 				496505E11DDD62E000689613 /* Main.storyboard in Resources */,
+				49134FC61DF91E7400CB78DE /* OverviewView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,11 +549,13 @@
 				494BD2EF1DF88AA7007635F7 /* APIParser.swift in Sources */,
 				494BD3011DF88ABA007635F7 /* RecipeDetailsViewController.swift in Sources */,
 				494BD2F01DF88AA7007635F7 /* APIViewController.swift in Sources */,
+				49134FCA1DF9224D00CB78DE /* OverviewViewController.swift in Sources */,
 				496505DC1DDD62E000689613 /* AppDelegate.swift in Sources */,
 				497664D41DDD7467000A00DA /* CellView.swift in Sources */,
 				494BD3031DF88ABA007635F7 /* RecipesViewModel.swift in Sources */,
 				494BD2FF1DF88ABA007635F7 /* Recipe.swift in Sources */,
 				496EB1101DF8CC5200B93446 /* SavedRecipes.xcdatamodeld in Sources */,
+				49134FC81DF91F8400CB78DE /* OverviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
