@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import CoreData
+@available(iOS 10.0, *)
 class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
@@ -15,16 +16,34 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var groceryList:GroceryList? = nil
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UITextView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         titleLabel.text = self.recipe?.title
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func saveCurrentRecipe(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newRecipe = NSEntityDescription.insertNewObject(forEntityName: "SavedRecipes", into: context)
+        newRecipe.setValue(self.recipe?.title, forKey:"name")
+        let groceryCurrent = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
+        newRecipe.setValue(groceryCurrent, forKey:"ingredients")
+        newRecipe.setValue(self.recipeDetails?.instructions, forKey:"recipe")
+        do{
+            try context.save()
+            print("SAVED")
+        }
+        catch{
+            print("Error")
+        }
     }
     
     func setRecipeDetails(details: RecipeDetails) {

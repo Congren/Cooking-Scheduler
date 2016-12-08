@@ -12,6 +12,7 @@ protocol RecipeDetailProtocol {
     func setRecipeDetails(details: RecipeDetails)
 }
 
+@available(iOS 10.0, *)
 class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     var recipes:[Recipe] = []

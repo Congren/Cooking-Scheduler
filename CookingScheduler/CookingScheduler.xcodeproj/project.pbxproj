@@ -29,6 +29,7 @@
 		496505E61DDD62E000689613 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496505E41DDD62E000689613 /* LaunchScreen.storyboard */; };
 		496505F11DDD62E100689613 /* CookingSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505F01DDD62E100689613 /* CookingSchedulerTests.swift */; };
 		496505FC1DDD62E100689613 /* CookingSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */; };
+		496EB1101DF8CC5200B93446 /* SavedRecipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 496EB10E1DF8CC5100B93446 /* SavedRecipes.xcdatamodeld */; };
 		497664D21DDD7434000A00DA /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 497664D11DDD7434000A00DA /* CellView.xib */; };
 		497664D41DDD7467000A00DA /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497664D31DDD7467000A00DA /* CellView.swift */; };
 		E8B8F3C9E747AD49F5979D69 /* Pods_CookingSchedulerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5F5E0DA5F38365C20A33BF /* Pods_CookingSchedulerUITests.framework */; };
@@ -80,6 +81,7 @@
 		496505F71DDD62E100689613 /* CookingSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		496505FB1DDD62E100689613 /* CookingSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingSchedulerUITests.swift; sourceTree = "<group>"; };
 		496505FD1DDD62E100689613 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496EB10F1DF8CC5100B93446 /* SavedRecipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavedRecipes.xcdatamodel; sourceTree = "<group>"; };
 		497664D11DDD7434000A00DA /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
 		497664D31DDD7467000A00DA /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		6D305DF2E0D9E9BED5DCF815 /* Pods-CookingSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CookingSchedulerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CookingSchedulerUITests/Pods-CookingSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				49C69A261DDD642400BBE375 /* Views */,
 				49C69A251DDD641E00BBE375 /* Controllers */,
 				49C69A241DDD641800BBE375 /* Models */,
+				496EB10E1DF8CC5100B93446 /* SavedRecipes.xcdatamodeld */,
 			);
 			path = CookingScheduler;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				497664D41DDD7467000A00DA /* CellView.swift in Sources */,
 				494BD3031DF88ABA007635F7 /* RecipesViewModel.swift in Sources */,
 				494BD2FF1DF88ABA007635F7 /* Recipe.swift in Sources */,
+				496EB1101DF8CC5200B93446 /* SavedRecipes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +801,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		496EB10E1DF8CC5100B93446 /* SavedRecipes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				496EB10F1DF8CC5100B93446 /* SavedRecipes.xcdatamodel */,
+			);
+			currentVersion = 496EB10F1DF8CC5100B93446 /* SavedRecipes.xcdatamodel */;
+			path = SavedRecipes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 496505D01DDD62E000689613 /* Project object */;
 }

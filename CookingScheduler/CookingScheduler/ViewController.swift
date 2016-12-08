@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+import CoreData
 
 extension UIColor {
     convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
@@ -19,6 +20,7 @@ extension UIColor {
         )
     }
 }
+@available(iOS 10.0, *)
 extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDelegate {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         let formatter = DateFormatter()
@@ -70,6 +72,7 @@ extension ViewController: JTAppleCalendarViewDataSource, JTAppleCalendarViewDele
         }
     }
 }
+@available(iOS 10.0, *)
 class ViewController: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
 
@@ -81,10 +84,41 @@ class ViewController: UIViewController {
         calendarView.cellInset = CGPoint(x: 0, y: 0)
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    @IBAction func showData(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedRecipes")
+        request.returnsObjectsAsFaults = false
+        do{
+            let results = try context.fetch(request)
+            if results.count > 0
+            {
+                for result in results as! [NSManagedObject]
+                {
+                    if let recipeName = result.value(forKey: "name") as? String
+                    {
+                        print(recipeName)
+                    }
+                    if let recipeInfo = result.value(forKey: "recipe") as? String
+                    {
+                        print(recipeInfo)
+                        print("printing recipe")
+                    }
+                    if let ingredientList = result.value(forKey: "ingredients") as? String
+                    {
+                        print(ingredientList)
+                    }
+                }
+            }
+        }
+        catch{
+            print("something happened")
+        }
+    }
 
 }
 
