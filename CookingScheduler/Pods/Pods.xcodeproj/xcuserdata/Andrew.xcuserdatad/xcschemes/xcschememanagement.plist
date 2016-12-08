@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ImageLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JTAppleCalendar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,6 +32,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>098261F84488E841E4F088BC768C44AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3456650A83F97045529E4C0492E2A10E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41CB152F056F089498EC010555776544</key>
 		<dict>
 			<key>primary</key>
@@ -38,11 +53,6 @@
 			<true/>
 		</dict>
 		<key>9B22756F1BC69AB282A6C7FFC7EB05C3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC93C251C7BA2CD82108EC8CBE73D498</key>
 		<dict>
 			<key>primary</key>
 			<true/>

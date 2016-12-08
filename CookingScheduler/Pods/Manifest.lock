@@ -1,12 +1,15 @@
 PODS:
+  - ImageLoader (0.11.0)
   - JTAppleCalendar (6.0.2)
 
 DEPENDENCIES:
+  - ImageLoader
   - JTAppleCalendar (~> 6.0)
 
 SPEC CHECKSUMS:
+  ImageLoader: fa8da359bbbb2337a41510486ab0b5ea7dbfab4c
   JTAppleCalendar: d0f71bdd45105279fc59329a9c24017e7028e499
 
-PODFILE CHECKSUM: b1cd8a3a5fbd5cda178b42c147b88b33be98958f
+PODFILE CHECKSUM: da9bb31fa556d53e4f5d7ece13142629c3f385e0
 
 COCOAPODS: 1.1.1
