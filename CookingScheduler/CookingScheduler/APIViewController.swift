@@ -16,6 +16,7 @@ protocol EnteredIngredients {
     func getIngredients(data: NSArray)
 }
 
+@available(iOS 10.0, *)
 class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, NoRecipesDelegate {
 
     @IBOutlet weak var tableView: UITableView!

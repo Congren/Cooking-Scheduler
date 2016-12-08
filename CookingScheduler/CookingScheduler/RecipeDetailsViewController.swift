@@ -8,11 +8,13 @@
 
 import UIKit
 import PTPopupWebView
+import CoreData
 
 protocol GroceryListData {
     func getGroceryList(data: GroceryList)
 }
 
+@available(iOS 10.0, *)
 class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
@@ -62,6 +64,24 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         print(neededIngredients ?? "Did not work")
     }
     
+    
+    @IBAction func saveRecipe(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newRecipe = NSEntityDescription.insertNewObject(forEntityName: "SavedRecipes", into: context)
+        newRecipe.setValue(self.recipe?.title, forKey:"name")
+        let groceryCurrent = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
+        newRecipe.setValue(groceryCurrent, forKey:"ingredients")
+        newRecipe.setValue(self.recipeDetails?.instructions, forKey:"recipe")
+        do{
+            try context.save()
+            print("SAVED")
+        }
+        catch{
+            print("Error")
+        }
+
+    }
 
     // MARK: - Navigation
 

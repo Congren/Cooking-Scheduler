@@ -18,6 +18,7 @@ protocol NoRecipesDelegate {
     func displayError()
 }
 
+@available(iOS 10.0, *)
 class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     var recipes:[Recipe] = []
