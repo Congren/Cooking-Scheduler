@@ -13,4 +13,5 @@ struct Recipe {
     let title: String
     let missedIngredients: Int
     let likes: Int
+    let imageUrl: String
 }

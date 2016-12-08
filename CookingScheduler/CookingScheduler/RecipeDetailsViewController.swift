@@ -49,7 +49,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
             }
             self.instructionsLabel.text = temp
         }
-        groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)!)
+        groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! as! [Ingredient])
         let neededIngredients = groceryList?.compareIngredients()
         print(neededIngredients ?? "Did not work")
 //        print(self.recipeDetails?.ingredients ?? "No Ingredients")

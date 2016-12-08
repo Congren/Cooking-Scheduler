@@ -10,6 +10,9 @@ import Foundation
 
 
 class RecipeParser {
+    
+    let errorAlert = ErrorMessage()
+    
     func parseDictionary(data: NSData?) -> NSArray? {
         do {
             let json = try JSONSerialization.jsonObject(with: data as! Data, options: []) as! NSArray
@@ -40,28 +43,26 @@ class RecipeParser {
             let instructions = info["instructions"] as? String
             let cuisines = info["cuisines"] as? [String]
             let ingredientsList = info["extendedIngredients"] as! NSArray
-            let ingredients = ingredientsList.map({getIngredient(info: $0 as! Dictionary<String, Any> )})
-            return RecipeDetails(id:id, title:title, cookTime:cookTime!, instructions: instructions!, ingredients:(ingredients as? [Ingredient])!, cuisines:cuisines!)
+            let ingredients = ingredientsList.map({getIngredient(info: $0 as! Dictionary<String, Any>)})
+            return RecipeDetails(id:id, title:title, cookTime:cookTime!, instructions: instructions ?? "No Data Available", ingredients:ingredients, cuisines:cuisines!)
         }
         return nil
     }
     
-    func getIngredient(info: Dictionary<String, Any>) -> Ingredient? {
-        if let id = info["id"] as? Int,
-            let name = info["name"] as? String {
-            return Ingredient(id:id, name:name, notes: nil)
-        }
-        return nil
+    func getIngredient(info: Dictionary<String, Any>) -> Ingredient {
+        let id = info["id"] as? Int ?? -1
+        let name = info["name"] as? String ?? "No Name"
+        return Ingredient(id:id, name:name, notes: nil)
     }
     
     func createRecipe(info:Dictionary<String, Any>) -> Recipe?{
         if let id = info["id"] as? Int,
             let title = info["title"] as? String,
             let likes = info["likes"] as? Int,
-            let missedI = info["missedIngredientCount"] as? Int {
+            let missedI = info["missedIngredientCount"] as? Int,
+            let image = info["image"] as? String{
             
-            
-            return Recipe(id:id, title:title, missedIngredients:missedI , likes:likes)
+            return Recipe(id:id, title:title, missedIngredients:missedI , likes:likes, imageUrl:image)
         }
         return nil
     }

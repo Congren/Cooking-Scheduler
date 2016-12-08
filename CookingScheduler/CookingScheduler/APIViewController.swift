@@ -25,6 +25,7 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
     var ingredients: [String] = []
     let apiClient = FindRecipe()
     let recipeParser = RecipeParser()
+    let errorAlert = ErrorMessage()
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientField.delegate = self
@@ -66,15 +67,7 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
     }
     
     func displayError() {
-        let alert = UIAlertController(title: "No Recipes",
-                                      message: "There were no recipes for those ingredients. Please Try Again",
-                                      preferredStyle: UIAlertControllerStyle.alert)
-        
-        let cancelAction = UIAlertAction(title: "OK",
-                                         style: .cancel, handler: nil)
-        
-        alert.addAction(cancelAction)
-        self.present(alert, animated: true, completion: nil)
+        self.present(errorAlert.createErrorMessage(title: "No Recipes", message: "There were no recipes for those ingredients. Please Try Again"), animated: true, completion: nil)
     }
     
     // MARK: Table View
