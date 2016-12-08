@@ -20,6 +20,7 @@ class NotePromptViewController: UIViewController {
     var indexPath:IndexPath? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
 

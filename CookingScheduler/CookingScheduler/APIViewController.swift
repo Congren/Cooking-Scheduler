@@ -16,8 +16,9 @@ protocol EnteredIngredients {
     func getIngredients(data: NSArray)
 }
 
-class APIViewController: UIViewController, UITextFieldDelegate {
+class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var ingredientField: UITextField!
     var delegate:DataFromAPI? = nil
     var iDelegate:EnteredIngredients? = nil
@@ -27,6 +28,10 @@ class APIViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientField.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "IngredientTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+//        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0)
         // Do any additional setup after loading the view.
     }
 
@@ -51,9 +56,40 @@ class APIViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         ingredients.append(textField.text!)
         textField.text = ""
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [
+            IndexPath(row: ingredients.count-1, section: 0)
+            ], with: .top)
+        self.tableView.endUpdates()
         return true
     }
     
+    // MARK: Table View
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.ingredients.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! IngredientTableViewCell
+        let ingredient = ingredients[indexPath.row]
+        cell.nameLabel?.text = ingredient
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            ingredients.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+
     
     // MARK: - Navigation
 
