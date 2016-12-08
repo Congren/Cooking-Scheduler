@@ -15,7 +15,8 @@ class GroceryViewController: UITableViewController, GroceryListData, NotePopUpDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "GroceryTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0)
+        self.tableView.layoutMargins = .zero
+        self.tableView.separatorInset = .zero
       //  ingredientListLabel.text = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
         // Do any additional setup after loading the view.
     }

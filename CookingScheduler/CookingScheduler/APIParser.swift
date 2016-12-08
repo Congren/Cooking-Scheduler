@@ -12,9 +12,7 @@ import Foundation
 class RecipeParser {
     func parseDictionary(data: NSData?) -> NSArray? {
         do {
-            print("here")
             let json = try JSONSerialization.jsonObject(with: data as! Data, options: []) as! NSArray
-            print(json)
             let recepieList = json.map({createRecipe(info: $0 as! Dictionary<String, Any>)})
             return recepieList as NSArray?
            

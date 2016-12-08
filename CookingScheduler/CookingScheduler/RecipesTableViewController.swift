@@ -12,6 +12,10 @@ protocol RecipeDetailProtocol {
     func setRecipeDetails(details: RecipeDetails)
 }
 
+protocol NoRecipesDelegate {
+    func displayError()
+}
+
 class RecipesTableViewController: UITableViewController,DataFromAPI {
 
     var recipes:[Recipe] = []
@@ -20,11 +24,13 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
     let apiClient = FindRecipe()
     let recipeParser = RecipeParser()
     var delegate:RecipeDetailProtocol? = nil
+    var noRecipesDelegate:NoRecipesDelegate? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0)
+        self.tableView.layoutMargins = .zero
+        self.tableView.separatorInset = .zero
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -38,6 +44,10 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
     }
 
     func dataReceived(data: NSArray) {
+        if(data.count == 0) {
+            self.navigationController?.popViewController(animated: true)
+            self.noRecipesDelegate!.displayError()
+        }
         self.recipes = data as! [Recipe]
         print(self.recipes.count)
         self.tableView.reloadData()

@@ -16,7 +16,7 @@ protocol EnteredIngredients {
     func getIngredients(data: NSArray)
 }
 
-class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, NoRecipesDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var ingredientField: UITextField!
@@ -31,7 +31,8 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.register(UINib(nibName: "IngredientTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-//        self.tableView.contentInset = UIEdgeInsetsMake(0, -15, 0, 0)
+        self.tableView.layoutMargins = .zero
+        self.tableView.separatorInset = .zero
         // Do any additional setup after loading the view.
     }
 
@@ -62,6 +63,18 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
             ], with: .top)
         self.tableView.endUpdates()
         return true
+    }
+    
+    func displayError() {
+        let alert = UIAlertController(title: "No Recipes",
+                                      message: "There were no recipes for those ingredients. Please Try Again",
+                                      preferredStyle: UIAlertControllerStyle.alert)
+        
+        let cancelAction = UIAlertAction(title: "OK",
+                                         style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: Table View
@@ -100,6 +113,7 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
         if(segue.identifier == "RecipeTableViewSegue") {
             let rtv:RecipesTableViewController = segue.destination as! RecipesTableViewController
             self.delegate = rtv
+            rtv.noRecipesDelegate = self
             rtv.ingredients = self.ingredients
         }
     }
