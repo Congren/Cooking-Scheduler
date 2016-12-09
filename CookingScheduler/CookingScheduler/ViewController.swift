@@ -12,6 +12,7 @@ import CoreData
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    let errorMess = ErrorMessage()
     var recipes: [SavedRecipes] = []
     
     override func viewDidLoad() {
@@ -50,6 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             catch{
                 print("Fetching failed")
+                self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorr we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
             }
         }
         tableView.reloadData()
@@ -61,6 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             recipes = try context.fetch(SavedRecipes.fetchRequest())
         }catch{
             print("oh no")
+             self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorr we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
         }
     }
     
