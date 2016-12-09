@@ -51,7 +51,7 @@ class GroceryViewController: UITableViewController, GroceryListData, NotePopUpDe
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GroceryTableViewCell
         let ingredient = self.groceryList?.neededIngredients[indexPath.row]
-        cell.nameLabel?.text = ingredient?.name
+        cell.nameLabel?.text = ingredient!.name + " " + String(ingredient!.ingredientDetails) + " " + (ingredient!.ingredientUnits)
         if (ingredient?.notes != nil) {
             cell.notesLabel.text = ingredient?.notes!
             cell.notesLabel.isEnabled = true

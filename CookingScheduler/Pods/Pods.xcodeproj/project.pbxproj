@@ -79,24 +79,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00AE83BF6F2EA737A5EBA0508F8A99DD /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		00AE83BF6F2EA737A5EBA0508F8A99DD /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
 		023A43A4919F79746B7AD9DACEA2490B /* Pods-CookingSchedulerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookingSchedulerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		0659C43387587EAF0A0123D74AE25CC8 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06C223BF5E9C5156BE7D4DA23ED43730 /* Pods_CookingSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingSchedulerUITests.framework; path = "Pods-CookingSchedulerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		080B5919A82A50344DD51CD47049A000 /* Pods-CookingSchedulerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingSchedulerUITests.modulemap"; sourceTree = "<group>"; };
+		0659C43387587EAF0A0123D74AE25CC8 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06C223BF5E9C5156BE7D4DA23ED43730 /* Pods_CookingSchedulerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		080B5919A82A50344DD51CD47049A000 /* Pods-CookingSchedulerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingSchedulerUITests.modulemap"; sourceTree = "<group>"; };
 		09F0CE73483B6890E383FC2D6C305084 /* Loader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loader.swift; path = ImageLoader/Loader.swift; sourceTree = "<group>"; };
 		0CAE7DEFC1955E35E9CCC90A017C58B2 /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ImageLoader/ImageLoader.swift; sourceTree = "<group>"; };
 		0E309F79FB1A0C1220A37ABF72DFACA1 /* Pods-CookingSchedulerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CookingSchedulerUITests-umbrella.h"; sourceTree = "<group>"; };
 		10D6D3BD147092058D197B27195312D5 /* Pods-CookingScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CookingScheduler.debug.xcconfig"; sourceTree = "<group>"; };
-		19401B4BDEF83546A05E0DB4060BA237 /* PTPopupWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PTPopupWebView.modulemap; sourceTree = "<group>"; };
+		19401B4BDEF83546A05E0DB4060BA237 /* PTPopupWebView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PTPopupWebView.modulemap; sourceTree = "<group>"; };
 		1B36D60F989724C0D2C04E6E322730BA /* Pods-CookingScheduler-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingScheduler-resources.sh"; sourceTree = "<group>"; };
 		1BB7B97CB371E1B3ADA41E4671D765F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1ED5C112512E69426E181F8877DE2B19 /* ImageLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ImageLoader.modulemap; sourceTree = "<group>"; };
+		1ED5C112512E69426E181F8877DE2B19 /* ImageLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ImageLoader.modulemap; sourceTree = "<group>"; };
 		20792A8E36E78181D4E95B1552298310 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238EA6E7F8E0354C832B33D666C063AE /* ImageLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImageLoader-dummy.m"; sourceTree = "<group>"; };
 		248569C0450095EEDDFEEA309F9BC91D /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageLoader.swift"; path = "ImageLoader/UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
 		251346E98C6C265DD721C271CA685E70 /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
-		256A39DC66F6152199D5EEF52F92B952 /* Pods-CookingSchedulerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingSchedulerTests.modulemap"; sourceTree = "<group>"; };
+		256A39DC66F6152199D5EEF52F92B952 /* Pods-CookingSchedulerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingSchedulerTests.modulemap"; sourceTree = "<group>"; };
 		26565DC38599A1405FE7764CD403DB67 /* PTPopupWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PTPopupWebViewController.swift; path = Pod/Classes/PTPopupWebViewController.swift; sourceTree = "<group>"; };
 		271B58EA2028249FDCD1D14BC4658DE0 /* ImageLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageLoader-umbrella.h"; sourceTree = "<group>"; };
 		2DA221FBD2590468582367AADDF0479A /* JTAppleReusableViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleReusableViewProtocol.swift; path = Sources/JTAppleReusableViewProtocol.swift; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		4157A2874FB763F3D8DB52790D951866 /* Pods-CookingSchedulerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CookingSchedulerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		439210585C50C0E236E41EED598D30A8 /* JTAppleCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-umbrella.h"; sourceTree = "<group>"; };
 		4446578A76431E2943192B42111ACD9B /* Pods-CookingScheduler-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingScheduler-frameworks.sh"; sourceTree = "<group>"; };
-		444F862006967C06AC58A28D4D6CC4CA /* Pods_CookingScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingScheduler.framework; path = "Pods-CookingScheduler.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		446C729C8F23A5F1AB04DDE4CB8812C9 /* ImageLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImageLoader.framework; path = ImageLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		444F862006967C06AC58A28D4D6CC4CA /* Pods_CookingScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		446C729C8F23A5F1AB04DDE4CB8812C9 /* ImageLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473BFAFF1AECD4B83411C9E9C4C7C434 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		489207016CA69A7B6D61EEFEA40F9E65 /* Pods-CookingSchedulerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CookingSchedulerUITests-dummy.m"; sourceTree = "<group>"; };
 		4C2262F2F25B69CEEC696ED347611235 /* Pods-CookingSchedulerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CookingSchedulerUITests-frameworks.sh"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		86B3D2B89911D2D053D30F19C21F5364 /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
 		875707C60C645BC055A0FCD93B951AAA /* PTPopupWebViewControllerBlur.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PTPopupWebViewControllerBlur.xib; path = Pod/Assets/PTPopupWebViewControllerBlur.xib; sourceTree = "<group>"; };
 		8A3026FF1B050186802C2A43CD276D46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93A766294728C875A052FDB5D05B64C9 /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
 		94FA03C0D9BB4BBDC75F57CBF65856C4 /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
 		955E4A39CDE94D5C4E7659204EAC9668 /* PTPopupWebView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PTPopupWebView-dummy.m"; sourceTree = "<group>"; };
@@ -157,11 +157,11 @@
 		EB641E7B266F7BA48D2BFAE261845AC2 /* PTPopupWebViewButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PTPopupWebViewButton.swift; path = Pod/Classes/PTPopupWebViewButton.swift; sourceTree = "<group>"; };
 		EE229A9835A64C0DDBB51C77BE1469FA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F059A71EF1CB302FB67AF3A7BCB69BD4 /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
-		F388A433A0407F43AB0890491DA6DD97 /* PTPopupWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PTPopupWebView.framework; path = PTPopupWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68548E9639273E179A911B4CBC1A470 /* Pods-CookingScheduler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CookingScheduler.modulemap"; sourceTree = "<group>"; };
+		F388A433A0407F43AB0890491DA6DD97 /* PTPopupWebView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PTPopupWebView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F68548E9639273E179A911B4CBC1A470 /* Pods-CookingScheduler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CookingScheduler.modulemap"; sourceTree = "<group>"; };
 		F9A1E520339776E9E3CB3468E94857D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA3D204140569CE5F5825835E904E05 /* PTPopupWebView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PTPopupWebView.xib; path = Pod/Assets/PTPopupWebView.xib; sourceTree = "<group>"; };
-		FFAB6864F0E19C8112C4BFB4B3788865 /* Pods_CookingSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CookingSchedulerTests.framework; path = "Pods-CookingSchedulerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAB6864F0E19C8112C4BFB4B3788865 /* Pods_CookingSchedulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookingSchedulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,7 +336,6 @@
 				248569C0450095EEDDFEEA309F9BC91D /* UIImageView+ImageLoader.swift */,
 				117416F8D8D1EA5EE152E9A522463F0C /* Support Files */,
 			);
-			name = ImageLoader;
 			path = ImageLoader;
 			sourceTree = "<group>";
 		};
@@ -361,7 +360,6 @@
 				9D77284BD1813E82DE09C275524DE545 /* Resources */,
 				237A8E15D01AD287D73065948451A562 /* Support Files */,
 			);
-			name = PTPopupWebView;
 			path = PTPopupWebView;
 			sourceTree = "<group>";
 		};
@@ -430,7 +428,6 @@
 				93A766294728C875A052FDB5D05B64C9 /* UserInteractionFunctions.swift */,
 				2F2D2663BF0333AB4408381EFE159295 /* Support Files */,
 			);
-			name = JTAppleCalendar;
 			path = JTAppleCalendar;
 			sourceTree = "<group>";
 		};
@@ -602,6 +599,20 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					098261F84488E841E4F088BC768C44AB = {
+						LastSwiftMigration = 0810;
+					};
+					57F32B337159056FB9E177608F64170B = {
+						LastSwiftMigration = 0810;
+					};
+					9B22756F1BC69AB282A6C7FFC7EB05C3 = {
+						LastSwiftMigration = 0810;
+					};
+					B489842209A1EBE3718D655D6BA4E4A0 = {
+						LastSwiftMigration = 0810;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -945,6 +956,7 @@
 				PRODUCT_NAME = Pods_CookingScheduler;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -981,6 +993,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
