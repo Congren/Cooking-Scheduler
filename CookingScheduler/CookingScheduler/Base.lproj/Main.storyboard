@@ -39,7 +39,7 @@
                                 </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nL0-3R-a4E">
-                                <rect key="frame" x="102" y="574" width="154" height="30"/>
+                                <rect key="frame" x="110.5" y="574" width="154" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Generate Grocery List">
                                     <color key="titleColor" red="0.7725490196" green="0.93725490199999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,12 +56,12 @@
                             <constraint firstItem="4xK-Sd-bzT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8k3-mc-GGg"/>
                             <constraint firstItem="4xK-Sd-bzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-8" id="Ali-tg-1MQ"/>
                             <constraint firstItem="vts-Fd-OOl" firstAttribute="top" secondItem="z3V-ym-CVJ" secondAttribute="bottom" constant="26" id="DsR-45-gpp"/>
+                            <constraint firstItem="nL0-3R-a4E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O0D-Ye-G6s"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nL0-3R-a4E" secondAttribute="bottom" constant="14" id="Oet-m7-tZ8"/>
                             <constraint firstItem="vts-Fd-OOl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="S7a-21-nao"/>
                             <constraint firstItem="vts-Fd-OOl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sks-32-52w"/>
                             <constraint firstItem="z3V-ym-CVJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="fHe-BL-3h3"/>
                             <constraint firstItem="nL0-3R-a4E" firstAttribute="top" secondItem="vts-Fd-OOl" secondAttribute="bottom" constant="29" id="qKe-Z3-83d"/>
-                            <constraint firstItem="nL0-3R-a4E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="86" id="yur-MC-T3Z"/>
                             <constraint firstItem="z3V-ym-CVJ" firstAttribute="centerX" secondItem="vts-Fd-OOl" secondAttribute="centerX" id="z2i-cy-L6S"/>
                         </constraints>
                     </view>
@@ -86,16 +86,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search By Keyword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqY-gQ-b5b">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search By Keyword" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqY-gQ-b5b">
                                 <rect key="frame" x="31" y="78" width="243" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-4s-TRT">
-                                <rect key="frame" x="296" y="73" width="46" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-4s-TRT">
+                                <rect key="frame" x="312" y="73" width="30" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Go">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -105,9 +103,8 @@
                                     <segue destination="Bgf-Uf-6PT" kind="show" identifier="RecipeTableViewSegue" id="VLd-qc-bBA"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="04x-E3-MSc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="04x-E3-MSc">
                                 <rect key="frame" x="0.0" y="121" width="375" height="497"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ng7-uC-Ovc">
@@ -122,6 +119,17 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.82352941176470584" green="0.30196078431372547" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VOk-O7-nqu" firstAttribute="top" secondItem="04x-E3-MSc" secondAttribute="bottom" id="0Db-Tl-SQp"/>
+                            <constraint firstItem="SJA-4s-TRT" firstAttribute="top" secondItem="4bI-aA-ObX" secondAttribute="bottom" constant="9" id="CR5-8Y-PGO"/>
+                            <constraint firstItem="qqY-gQ-b5b" firstAttribute="leading" secondItem="kWA-c5-ig2" secondAttribute="leadingMargin" constant="15" id="GuP-Bi-V4X"/>
+                            <constraint firstItem="qqY-gQ-b5b" firstAttribute="top" secondItem="4bI-aA-ObX" secondAttribute="bottom" constant="14" id="POb-K7-ygu"/>
+                            <constraint firstItem="04x-E3-MSc" firstAttribute="top" secondItem="qqY-gQ-b5b" secondAttribute="bottom" constant="13" id="QJ4-dn-hPe"/>
+                            <constraint firstItem="04x-E3-MSc" firstAttribute="width" secondItem="kWA-c5-ig2" secondAttribute="width" id="Wlr-qb-kn0"/>
+                            <constraint firstItem="04x-E3-MSc" firstAttribute="centerX" secondItem="kWA-c5-ig2" secondAttribute="centerX" id="bBz-MM-3CW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SJA-4s-TRT" secondAttribute="trailing" constant="17" id="mzq-n5-Xte"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qqY-gQ-b5b" secondAttribute="trailing" constant="85" id="py1-dM-PC9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="1gT-J4-UqT"/>
                     <connections>
@@ -184,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2O-ZP-tWc">
-                                <rect key="frame" x="251" y="72" width="91" height="30"/>
+                                <rect key="frame" x="265" y="72" width="77" height="30"/>
                                 <state key="normal" title="Ingredients">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -209,7 +217,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q1-Bj-TGS">
-                                <rect key="frame" x="136" y="73" width="103" height="30"/>
+                                <rect key="frame" x="136" y="94" width="103" height="30"/>
                                 <state key="normal" title="View Webpage">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -231,7 +239,7 @@
                         <constraints>
                             <constraint firstItem="38g-dg-Hif" firstAttribute="bottom" secondItem="wZv-Kd-YcP" secondAttribute="top" id="21V-4g-Skv"/>
                             <constraint firstItem="38g-dg-Hif" firstAttribute="leading" secondItem="wsc-bL-m8e" secondAttribute="leadingMargin" id="2rA-Re-0W0"/>
-                            <constraint firstItem="0Q1-Bj-TGS" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="9" id="98q-AA-rN3"/>
+                            <constraint firstItem="0Q1-Bj-TGS" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="30" id="98q-AA-rN3"/>
                             <constraint firstItem="38g-dg-Hif" firstAttribute="top" secondItem="U8H-mw-Vux" secondAttribute="bottom" constant="24" id="Am3-sH-B4f"/>
                             <constraint firstItem="Fl1-L8-Paa" firstAttribute="leading" secondItem="wsc-bL-m8e" secondAttribute="leading" id="Eh1-6j-ttD"/>
                             <constraint firstItem="H2O-ZP-tWc" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="8" symbolic="YES" id="FIT-4i-cLY"/>
@@ -241,10 +249,9 @@
                             <constraint firstItem="U8H-mw-Vux" firstAttribute="top" secondItem="Fl1-L8-Paa" secondAttribute="bottom" constant="8" id="RGg-ub-SjE"/>
                             <constraint firstItem="EjF-xj-Ojh" firstAttribute="top" secondItem="90A-ih-9PX" secondAttribute="bottom" constant="9" id="SDO-IU-ecf"/>
                             <constraint firstItem="Fl1-L8-Paa" firstAttribute="top" secondItem="H2O-ZP-tWc" secondAttribute="bottom" constant="21" id="TZa-82-Vpv"/>
-                            <constraint firstItem="H2O-ZP-tWc" firstAttribute="leading" secondItem="0Q1-Bj-TGS" secondAttribute="trailing" constant="12" id="UR8-gN-VgI"/>
                             <constraint firstAttribute="trailing" secondItem="Fl1-L8-Paa" secondAttribute="trailing" id="aYE-dH-7rj"/>
-                            <constraint firstItem="0Q1-Bj-TGS" firstAttribute="leading" secondItem="EjF-xj-Ojh" secondAttribute="trailing" constant="21" id="dAt-CV-OA4"/>
-                            <constraint firstItem="EjF-xj-Ojh" firstAttribute="baseline" secondItem="0Q1-Bj-TGS" secondAttribute="baseline" id="l1Y-Id-VXT"/>
+                            <constraint firstItem="EjF-xj-Ojh" firstAttribute="baseline" secondItem="0Q1-Bj-TGS" secondAttribute="baseline" constant="-21" id="l1Y-Id-VXT"/>
+                            <constraint firstItem="EjF-xj-Ojh" firstAttribute="leading" secondItem="wsc-bL-m8e" secondAttribute="leadingMargin" constant="15" id="la5-pO-wiZ"/>
                             <constraint firstItem="U8H-mw-Vux" firstAttribute="centerX" secondItem="wsc-bL-m8e" secondAttribute="centerX" id="up2-JY-1sP"/>
                         </constraints>
                     </view>
@@ -393,7 +400,7 @@
             </objects>
             <point key="canvasLocation" x="-407" y="-379"/>
         </scene>
-        <!--Favorited Table View Controller-->
+        <!--Your Favorite Recipes-->
         <scene sceneID="Aeq-So-rIO">
             <objects>
                 <tableViewController id="xad-Cf-5gD" customClass="FavoritedTableViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
@@ -416,7 +423,7 @@
                             <outlet property="delegate" destination="xad-Cf-5gD" id="Y0Z-3H-SKh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ydu-IC-QaO"/>
+                    <navigationItem key="navigationItem" title="Your Favorite Recipes" id="Ydu-IC-QaO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Txz-Mc-t7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
