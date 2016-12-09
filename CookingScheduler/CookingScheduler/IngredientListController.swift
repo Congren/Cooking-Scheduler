@@ -12,7 +12,7 @@ import UIKit
 class IngredientListController: UIViewController {
     var ingredients = ""
     var recipes: [SavedRecipes] = []
-    var ingredientList: [String: Double] = [:]
+    var ingredientList: [String: [String]] = [:]
     //var ingredientInfos: [String] = []
 
     @IBOutlet weak var textView: UITextView!
@@ -30,17 +30,19 @@ class IngredientListController: UIViewController {
         for i in recipes{
             if let itemList = i.ingredients{
                 if let itemDetails = i.ingredientDetail{
-                    let itemArray = itemList.components(separatedBy: ",")
-                    let detailArray = itemDetails.components(separatedBy: ",")
-                    for n in 0..<itemArray.count{
-                        if !Array(ingredientList.keys).contains(itemArray[n]){
-                            ingredientList[itemArray[n]] = 0.0
-                            if let normal = Double(detailArray[n]){
-                                ingredientList[itemArray[n]] = normal
-                            }
-                        }else{
-                            if let extra = Double(detailArray[n]) {
-                                ingredientList[itemArray[n]]! += extra
+                    if let itemUnits = i.ingredientUnit {
+                        let itemArray = itemList.components(separatedBy: ",")
+                        let detailArray = itemDetails.components(separatedBy: ",")
+                        let unitArray = itemUnits.components(separatedBy: ",")
+                        for n in 0..<itemArray.count{
+                            if !Array(ingredientList.keys).contains(itemArray[n]){
+                                ingredientList[itemArray[n]] = []
+                                ingredientList[itemArray[n]] = [detailArray[n], unitArray[n]]
+                            }else{
+                                if let extra = Double(detailArray[n]) {
+                                    let value = Double((ingredientList[itemArray[n]]?[0])!)! + extra
+                                    ingredientList[itemArray[n]]![0] = String(value)
+                                }
                             }
                         }
                     }
@@ -49,7 +51,7 @@ class IngredientListController: UIViewController {
             }
         }
         for pair in ingredientList{
-            ingredients += pair.0 + "    " + String(pair.1) + "\n"
+            ingredients += pair.0 + "      ---     " + String(pair.1[0]) + " " + String(pair.1[1]) + "\n"
         }
         print(ingredientList)
         //ingredients += item.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) + "\n"

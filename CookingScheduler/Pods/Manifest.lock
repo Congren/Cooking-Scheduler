@@ -1,15 +1,18 @@
 PODS:
   - ImageLoader (0.11.0)
   - JTAppleCalendar (6.0.2)
+  - PTPopupWebView (0.3.0)
 
 DEPENDENCIES:
   - ImageLoader
   - JTAppleCalendar (~> 6.0)
+  - PTPopupWebView
 
 SPEC CHECKSUMS:
   ImageLoader: fa8da359bbbb2337a41510486ab0b5ea7dbfab4c
   JTAppleCalendar: d0f71bdd45105279fc59329a9c24017e7028e499
+  PTPopupWebView: b2e30f5b9024ae23d0cd071ca0addf2abe99a7c6
 
-PODFILE CHECKSUM: da9bb31fa556d53e4f5d7ece13142629c3f385e0
+PODFILE CHECKSUM: f35c57841239091a0ed6293582b178a5664d3a7b
 
 COCOAPODS: 1.1.1

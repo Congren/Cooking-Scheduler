@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PTPopupWebView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CookingScheduler.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3456650A83F97045529E4C0492E2A10E</key>
+		<key>41CB152F056F089498EC010555776544</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41CB152F056F089498EC010555776544</key>
+		<key>57F32B337159056FB9E177608F64170B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -53,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>9B22756F1BC69AB282A6C7FFC7EB05C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B489842209A1EBE3718D655D6BA4E4A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
