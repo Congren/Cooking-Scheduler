@@ -15,7 +15,7 @@ protocol GroceryListData {
 }
 
 @available(iOS 10.0, *)
-class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, SavedRecipeDelegate, SendGroceryList {
+class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, SavedRecipeDelegate {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
     var ingredients:[String] = []
@@ -42,10 +42,6 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, Saved
         print(self.recipeDetails?.url ?? "No")
         popupvc.popupView.URL(string:(self.recipeDetails?.url)!)
         popupvc.show()
-    }
-    
-    func sendGroceryList(data:GroceryList) {
-        self.groceryList = data
     }
     
     func setRecipeDetails(details: RecipeDetails) {
@@ -131,7 +127,6 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, Saved
         if(segue.identifier == "ToGroceryList") {
             let gvc:GroceryViewController = segue.destination as! GroceryViewController
             self.delegate = gvc
-            gvc.delegate = self;
             self.delegate?.getGroceryList(data: self.groceryList!)
         }
         if(segue.identifier == "SavePopUp") {
