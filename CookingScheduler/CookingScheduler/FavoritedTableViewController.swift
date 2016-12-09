@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Foundation
 import CoreData
 
 @available(iOS 10.0, *)
+
 class FavoritedTableViewController: UITableViewController {
 
     let errorMess = ErrorMessage()
     var recipes = [FavoritedRecipes]()
+    var ingredients:[String] = []
+    var selectedRecipe: Recipe? = nil
+    let apiClient = FindRecipe()
+    let recipeParser = RecipeParser()
+    var delegate:RecipeDetailProtocol? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -68,12 +75,27 @@ class FavoritedTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let r = self.recipes[indexPath.row]
+        self.selectedRecipe = Recipe(id:Int(r.id), title:r.name!, missedIngredients:0, likes:0, imageUrl:r.imageUrl!)
+        print("------------\(r.ingredients)--------------")
+        //self.ingredients = (r.ingredients?.components(separatedBy: ","))!
+        self.performSegue(withIdentifier: "DetailFromFav", sender: self)
+    }
 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
+     struct Recipe {
+     let id: Int
+     let title: String
+     let missedIngredients: Int
+     let likes: Int
+     let imageUrl: String
+     }
+
     }
     */
 
@@ -104,14 +126,32 @@ class FavoritedTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "DetailFromFav") {
+            let rdvc:RecipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+            rdvc.recipe = self.selectedRecipe
+            self.delegate = rdvc
+            rdvc.ingredients = self.ingredients
+            print("====================")
+            print(self.ingredients)
+            print("====================")
+            apiClient.getRecipeDetails(id: (self.selectedRecipe?.id)!) { (data) in
+                rdvc.recipeDetails = self.recipeParser.parseDetails(data: data)
+                if (self.delegate != nil) {
+                    print(rdvc.recipeDetails)
+                    print("askfjl;dksafkasfkdfksfkadskfjlskfjl;akdfkajds")
+                    self.delegate!.setRecipeDetails(details: rdvc.recipeDetails!)
+                }
+            }
+
+        }
     }
-    */
+
 
 }
