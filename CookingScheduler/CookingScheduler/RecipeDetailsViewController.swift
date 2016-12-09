@@ -15,7 +15,7 @@ protocol GroceryListData {
 }
 
 @available(iOS 10.0, *)
-class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
+class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, SavedRecipeDelegate, SendGroceryList {
     var recipe:Recipe? = nil
     var recipeDetails: RecipeDetails? = nil
     var ingredients:[String] = []
@@ -44,6 +44,10 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         popupvc.show()
     }
     
+    func sendGroceryList(data:GroceryList) {
+        self.groceryList = data
+    }
+    
     func setRecipeDetails(details: RecipeDetails) {
         DispatchQueue.main.async {
             var temp = ""
@@ -61,7 +65,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
             }
             self.instructionsLabel.text = temp
         }
-        groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! as! [Ingredient])
+        groceryList = GroceryList(ingredientsOwned:ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! )
         let neededIngredients = groceryList?.compareIngredients()
         print(neededIngredients ?? "Did not work")
     }
@@ -88,7 +92,12 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     }
     
     
-    @IBAction func saveRecipe(_ sender: Any) {
+    func dismiss() {
+        self.dismiss(animated: true, completion: nil)
+        self.view.alpha = 1
+    }
+    
+    func save(day: Int, meal: Int) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newRecipe = NSEntityDescription.insertNewObject(forEntityName: "SavedRecipes", into: context)
@@ -100,6 +109,8 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         let ingredientUnitInfo = self.recipeDetails?.ingredients.map({String($0.ingredientUnits)}).joined(separator:",")
         newRecipe.setValue(ingredientDetailInfo!, forKey:"ingredientDetail")
         newRecipe.setValue(ingredientUnitInfo!, forKey:"ingredientUnit")
+        newRecipe.setValue(day, forKey: "day")
+        newRecipe.setValue(meal, forKey: "meal")
         do{
             try context.save()
             print("SAVED")
@@ -109,7 +120,6 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
             print("Error")
             self.present(errorMess.createErrorMessage(title: "Favorite Failed", message: "Something went wrong. Please Try Again"), animated: true, completion: nil)
         }
-
     }
 
     // MARK: - Navigation
@@ -121,7 +131,13 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         if(segue.identifier == "ToGroceryList") {
             let gvc:GroceryViewController = segue.destination as! GroceryViewController
             self.delegate = gvc
+            gvc.delegate = self;
             self.delegate?.getGroceryList(data: self.groceryList!)
+        }
+        if(segue.identifier == "SavePopUp") {
+            let savePopUp:SaveRecipeViewController = segue.destination as! SaveRecipeViewController
+            savePopUp.delegate = self
+            self.view.alpha = 0.5
         }
     }
 

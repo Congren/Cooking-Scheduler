@@ -163,7 +163,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ng7-uC-Ovc" id="Y4M-Lu-D8D">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -193,6 +193,84 @@
             </objects>
             <point key="canvasLocation" x="1484" y="-51.724137931034484"/>
         </scene>
+        <!--Save Recipe View Controller-->
+        <scene sceneID="UHC-Jx-ar6">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="DpI-nc-AlN" customClass="SaveRecipeViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q6n-qf-bfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="sed-1g-gIH"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="JHU-yJ-c9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFU-Sm-Xhc">
+                                <rect key="frame" x="28" y="202" width="320" height="263"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-K3-p3j">
+                                        <rect key="frame" x="0.0" y="48" width="320" height="168"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLB-9x-qyG">
+                                        <rect key="frame" x="52" y="224" width="34" height="30"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="save:" destination="DpI-nc-AlN" eventType="touchUpInside" id="pwc-gb-24a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zil-xQ-j0y">
+                                        <rect key="frame" x="233" y="225" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="DpI-nc-AlN" eventType="touchUpInside" id="vpv-LP-gTl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Meal and Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8K-MW-aMn">
+                                        <rect key="frame" x="81.5" y="34" width="156" height="39"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="aCr-VU-7Oc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hLB-9x-qyG" firstAttribute="top" secondItem="UdF-K3-p3j" secondAttribute="bottom" constant="8" id="5cr-45-pKJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hLB-9x-qyG" secondAttribute="bottom" constant="9" id="7Ke-Gv-rCu"/>
+                                    <constraint firstItem="UdF-K3-p3j" firstAttribute="leading" secondItem="WFU-Sm-Xhc" secondAttribute="leading" id="7qo-bw-VPg"/>
+                                    <constraint firstItem="zil-xQ-j0y" firstAttribute="bottom" secondItem="WFU-Sm-Xhc" secondAttribute="bottomMargin" id="Fzu-KQ-SAd"/>
+                                    <constraint firstItem="UdF-K3-p3j" firstAttribute="width" secondItem="WFU-Sm-Xhc" secondAttribute="width" id="NMC-hY-Xzw"/>
+                                    <constraint firstAttribute="trailing" secondItem="zil-xQ-j0y" secondAttribute="trailing" constant="39" id="Olc-tK-OoQ"/>
+                                    <constraint firstItem="s8K-MW-aMn" firstAttribute="top" secondItem="WFU-Sm-Xhc" secondAttribute="top" constant="34" id="QeO-tn-FUq"/>
+                                    <constraint firstItem="UdF-K3-p3j" firstAttribute="top" secondItem="WFU-Sm-Xhc" secondAttribute="top" constant="48" id="YQi-QE-ntk"/>
+                                    <constraint firstItem="zil-xQ-j0y" firstAttribute="top" secondItem="UdF-K3-p3j" secondAttribute="bottom" constant="9" id="ZL2-Yn-Lgk"/>
+                                    <constraint firstItem="s8K-MW-aMn" firstAttribute="centerX" secondItem="WFU-Sm-Xhc" secondAttribute="centerX" id="vN5-o6-aSB"/>
+                                    <constraint firstItem="hLB-9x-qyG" firstAttribute="leading" secondItem="WFU-Sm-Xhc" secondAttribute="leading" constant="52" id="zUs-2m-o5p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WFU-Sm-Xhc" firstAttribute="centerY" secondItem="JHU-yJ-c9Q" secondAttribute="centerY" id="8gg-XY-QIz"/>
+                            <constraint firstItem="WFU-Sm-Xhc" firstAttribute="top" secondItem="q6n-qf-bfw" secondAttribute="bottom" constant="182" id="HGf-cb-6Kx"/>
+                            <constraint firstItem="WFU-Sm-Xhc" firstAttribute="centerX" secondItem="JHU-yJ-c9Q" secondAttribute="centerX" id="TE9-qv-XB4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mealPicker" destination="UdF-K3-p3j" id="eL0-1A-diL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kld-cn-D48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3952.8000000000002" y="-868.51574212893559"/>
+        </scene>
         <!--Recipes-->
         <scene sceneID="d2U-sF-MkW">
             <objects>
@@ -206,7 +284,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J9g-b9-DRH" id="1l0-Ut-mPw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -265,7 +343,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveRecipe:" destination="SJf-H5-gb5" eventType="touchUpInside" id="Hpw-n8-Pez"/>
+                                    <segue destination="DpI-nc-AlN" kind="presentation" identifier="SavePopUp" id="0ZH-yB-gEG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q1-Bj-TGS">
@@ -329,7 +407,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEv-Eq-1Oq" id="agT-Sv-bfK">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -342,6 +420,8 @@
                             <outlet property="delegate" destination="wuu-20-bHs" id="aMF-gD-ghd"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdI-Zh-hPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -465,9 +545,12 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZJ-BS-6b2" id="KAQ-hQ-Tgm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SJf-H5-gb5" kind="show" identifier="DetailFromFav" id="QHU-Uo-kKE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -526,4 +609,7 @@
         <image name="Icon-20" width="20" height="20"/>
         <image name="Icon-21" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QHU-Uo-kKE"/>
+    </inferredMetricsTieBreakers>
 </document>
