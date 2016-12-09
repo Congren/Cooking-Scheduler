@@ -12,4 +12,7 @@ struct Ingredient {
     let id: Int?
     let name: String
     var notes: String? = nil
+    let ingredientDetails: Double
+    let ingredientUnits: String
+
 }

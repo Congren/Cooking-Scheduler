@@ -11,6 +11,8 @@ import CoreData
 @available(iOS 10.0, *)
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
+    
     @IBOutlet weak var tableView: UITableView!
     let errorMess = ErrorMessage()
     var recipes: [SavedRecipes] = []
@@ -27,6 +29,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
         //reload table with the data
     }
+    
+    
+    @IBAction func generateList(_ sender: Any) {
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return recipes.count

@@ -15,6 +15,8 @@ class GroceryList {
     init(ingredientsOwned: [String], recipeIngredients: [Ingredient]) {
         self.ingredientsOwned = ingredientsOwned
         self.recipeIngredients = recipeIngredients
+        print (recipeIngredients)
+
     }
     
     func compareIngredients() -> [Ingredient] {
@@ -27,7 +29,7 @@ class GroceryList {
                 }
             }
         }
-        print("Needed: \(neededIngredients)")
+        //print("Needed: \(neededIngredients)")
         return neededIngredients
     }
 }

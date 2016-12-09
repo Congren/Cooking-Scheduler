@@ -54,7 +54,9 @@ class RecipeParser {
     func getIngredient(info: Dictionary<String, Any>) -> Ingredient {
         let id = info["id"] as? Int ?? -1
         let name = info["name"] as? String ?? "No Name"
-        return Ingredient(id:id, name:name, notes: nil)
+        let ingredientInfo = (info["amount"]! as AnyObject).doubleValue ?? 0.0
+        let ingredientUnit = info["unit"] as? String ?? "N/A"
+        return Ingredient(id:id, name:name, notes: nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
     }
     
     func createRecipe(info:Dictionary<String, Any>) -> Recipe?{

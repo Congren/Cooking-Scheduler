@@ -52,7 +52,7 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
             self.noRecipesDelegate!.displayError()
         }
         self.recipes = data as! [Recipe]
-        print(self.recipes.count)
+        //print(self.recipes.count)
         self.tableView.reloadData()
     }
     
