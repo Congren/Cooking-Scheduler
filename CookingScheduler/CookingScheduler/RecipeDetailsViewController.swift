@@ -24,6 +24,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //print(self.recipeDetails?.ingredients)
         titleLabel.text = self.recipe?.title
         // Do any additional setup after loading the view.
     }
@@ -52,7 +53,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         }
         groceryList = GroceryList(ingredientsOwned: ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! as! [Ingredient])
         let neededIngredients = groceryList?.compareIngredients()
-        print(neededIngredients ?? "Did not work")
+    //    print(neededIngredients ?? "Did not work")
 //        print(self.recipeDetails?.ingredients ?? "No Ingredients")
 //        print(type(of:self.recipeDetails?.instructions))
 //        print(self.recipeDetails ?? "No Recipe")
@@ -65,9 +66,13 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol {
         let context = appDelegate.persistentContainer.viewContext
         let newRecipe = NSEntityDescription.insertNewObject(forEntityName: "SavedRecipes", into: context)
         newRecipe.setValue(self.recipe?.title, forKey:"name")
-        let groceryCurrent = groceryList?.neededIngredients.map({$0.name}).joined(separator:", ")
+        let groceryCurrent = groceryList?.neededIngredients.map({$0.name}).joined(separator:",")
         newRecipe.setValue(groceryCurrent, forKey:"ingredients")
         newRecipe.setValue(self.recipeDetails?.instructions, forKey:"recipe")
+        let ingredientDetailInfo = self.recipeDetails?.ingredients.map({String($0.ingredientDetails)}).joined(separator:",")
+        let ingredientUnitInfo = self.recipeDetails?.ingredients.map({String($0.ingredientUnits)}).joined(separator:",")
+        newRecipe.setValue(ingredientDetailInfo!, forKey:"ingredientDetail")
+        newRecipe.setValue(ingredientUnitInfo!, forKey:"ingredientUnit")
         do{
             try context.save()
             print("SAVED")

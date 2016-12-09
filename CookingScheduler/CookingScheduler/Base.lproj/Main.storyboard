@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Overview-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,6 +44,9 @@
                                 <state key="normal" title="Generate Grocery List">
                                     <color key="titleColor" red="0.7725490196" green="0.93725490199999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UyD-dH-HNR" kind="show" id="hoL-V9-eUA"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vts-Fd-OOl">
                                 <rect key="frame" x="34" y="103" width="306" height="442"/>
@@ -65,14 +68,63 @@
                             <constraint firstItem="z3V-ym-CVJ" firstAttribute="centerX" secondItem="vts-Fd-OOl" secondAttribute="centerX" id="z2i-cy-L6S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="a7K-1b-xJh"/>
+                    <tabBarItem key="tabBarItem" title="Overview" id="a7K-1b-xJh"/>
                     <connections>
                         <outlet property="tableView" destination="vts-Fd-OOl" id="E26-l8-adC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-407.19999999999999" y="369.26536731634184"/>
+            <point key="canvasLocation" x="-407" y="370"/>
+        </scene>
+        <!--Ingredient List Controller-->
+        <scene sceneID="ff6-Q0-Y3H">
+            <objects>
+                <viewController id="UyD-dH-HNR" customClass="IngredientListController" customModule="CookingScheduler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fCK-0r-p5C"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Lx-gi-qH7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UTK-Ay-EZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ingredients" translatesAutoresizingMaskIntoConstraints="NO" id="opr-fZ-3qZ">
+                                <rect key="frame" x="18" y="117" width="341" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94887715578079224" green="0.77968519926071167" blue="0.77807778120040894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Necessary Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-Kn-zX4">
+                                <rect key="frame" x="60" y="56" width="255" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLv-ZP-YpM">
+                                <rect key="frame" x="156" y="570" width="62" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="u3T-TX-bPB" kind="show" id="HCf-Nd-fka"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82352941180000006" green="0.30196078430000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="opr-fZ-3qZ" id="VYc-e1-pGI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkd-1c-Gxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407.19999999999999" y="1109.5952023988007"/>
         </scene>
         <!--Search-->
         <scene sceneID="hTd-zI-HrR">
@@ -146,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J9g-b9-DRH" id="1l0-Ut-mPw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -359,8 +411,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WyJ-vV-67g" kind="relationship" relationship="viewControllers" id="Zl8-uG-XNH"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e9p-VP-dgw"/>
+                        <segue destination="WyJ-vV-67g" kind="relationship" relationship="viewControllers" id="sli-oj-lTZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4r-5T-xGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -384,7 +436,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1h-mI-57W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544.79999999999995" y="-51.724137931034484"/>
+            <point key="canvasLocation" x="535" y="-379"/>
         </scene>
     </scenes>
 </document>
