@@ -19,7 +19,13 @@ class IngredientListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        generateList()
+        
+        // Do any additional setup after loading the view.
+    }
+    func generateList(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
         do{
             recipes = try context.fetch(SavedRecipes.fetchRequest())
         }
@@ -55,12 +61,11 @@ class IngredientListController: UIViewController {
         }
         print(ingredientList)
         //ingredients += item.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) + "\n"
-
+        
         textView.text = ingredients
 
-        // Do any additional setup after loading the view.
+        
     }
-
     
 
 }

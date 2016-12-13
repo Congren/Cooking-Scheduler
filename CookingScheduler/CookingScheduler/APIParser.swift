@@ -37,7 +37,6 @@ class RecipeParser {
     }
     
     func createRecipeDetails(info:Dictionary<String, Any>) -> RecipeDetails? {
-        print(info)
         if let id = info["id"] as? Int,
             let title = info["title"] as? String{
             let cookTime = info["readyInMinutes"] as? Int

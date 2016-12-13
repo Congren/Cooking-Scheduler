@@ -31,6 +31,7 @@ class FindRecipe {
                 return
             }
             print(data!)
+            //print("about to hit completion")
             completion(data as NSData?)
         }
         
