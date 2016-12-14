@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0B7220491E9F7FA64395F486 /* Pods_CookingScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52A4367811BB41F5DC66D14 /* Pods_CookingScheduler.framework */; };
 		162AEEE41DE3F7AA00FAD179 /* APIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162AEEE31DE3F7AA00FAD179 /* APIParser.swift */; };
+		164E73421DFAF4B700C9BEA0 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E73401DFAF4B700C9BEA0 /* OverviewTableViewCell.swift */; };
+		164E73431DFAF4B700C9BEA0 /* OverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164E73411DFAF4B700C9BEA0 /* OverviewTableViewCell.xib */; };
+		164E73451DFAF4CC00C9BEA0 /* SaveRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E73441DFAF4CC00C9BEA0 /* SaveRecipeViewController.swift */; };
+		164E73481DFAF4D900C9BEA0 /* FavoritedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164E73461DFAF4D900C9BEA0 /* FavoritedTableViewCell.xib */; };
+		164E73491DFAF4D900C9BEA0 /* FavoritedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E73471DFAF4D900C9BEA0 /* FavoritedTableViewController.swift */; };
+		164E734B1DFAF4E300C9BEA0 /* FavoritedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164E734A1DFAF4E300C9BEA0 /* FavoritedTableViewCell.swift */; };
 		166AA98D1DF0FAC00033073F /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166AA98C1DF0FAC00033073F /* RecipeDetailsViewController.swift */; };
 		166AA98F1DF4BCDC0033073F /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166AA98E1DF4BCDC0033073F /* RecipeDetails.swift */; };
 		166AA9931DF671060033073F /* GroceryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166AA9921DF671060033073F /* GroceryList.swift */; };
@@ -83,6 +89,12 @@
 
 /* Begin PBXFileReference section */
 		162AEEE31DE3F7AA00FAD179 /* APIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParser.swift; sourceTree = "<group>"; };
+		164E73401DFAF4B700C9BEA0 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		164E73411DFAF4B700C9BEA0 /* OverviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverviewTableViewCell.xib; sourceTree = "<group>"; };
+		164E73441DFAF4CC00C9BEA0 /* SaveRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveRecipeViewController.swift; sourceTree = "<group>"; };
+		164E73461DFAF4D900C9BEA0 /* FavoritedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritedTableViewCell.xib; sourceTree = "<group>"; };
+		164E73471DFAF4D900C9BEA0 /* FavoritedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritedTableViewController.swift; sourceTree = "<group>"; };
+		164E734A1DFAF4E300C9BEA0 /* FavoritedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritedTableViewCell.swift; sourceTree = "<group>"; };
 		166AA98C1DF0FAC00033073F /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		166AA98E1DF4BCDC0033073F /* RecipeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		166AA9921DF671060033073F /* GroceryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryList.swift; sourceTree = "<group>"; };
@@ -321,6 +333,7 @@
 			children = (
 				49B499111DFFC01B0095C0B8 /* FavoritedTableViewController.swift */,
 				4967AA4E1DFAE98500D26D7C /* IngredientListController.swift */,
+				164E73441DFAF4CC00C9BEA0 /* SaveRecipeViewController.swift */,
 				16D39B351DF8FFDD00FDC5DB /* NotePromptViewController.swift */,
 				166AA9941DF686C20033073F /* GroceryViewController.swift */,
 				166AA98C1DF0FAC00033073F /* RecipeDetailsViewController.swift */,
@@ -347,6 +360,11 @@
 				494BD2FD1DF88ABA007635F7 /* RecipeTableViewCell.swift */,
 				497664D11DDD7434000A00DA /* CellView.xib */,
 				497664D31DDD7467000A00DA /* CellView.swift */,
+				164E73401DFAF4B700C9BEA0 /* OverviewTableViewCell.swift */,
+				164E73411DFAF4B700C9BEA0 /* OverviewTableViewCell.xib */,
+				164E73461DFAF4D900C9BEA0 /* FavoritedTableViewCell.xib */,
+				164E734A1DFAF4E300C9BEA0 /* FavoritedTableViewCell.swift */,
+				164E73471DFAF4D900C9BEA0 /* FavoritedTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -437,6 +455,7 @@
 				TargetAttributes = {
 					496505D71DDD62E000689613 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 63GE67D6DP;
 						LastSwiftMigration = 0810;
 					};
 					496505EB1DDD62E100689613 = {
@@ -481,6 +500,8 @@
 				49B499101DFFC00E0095C0B8 /* FavoritedTableViewCell.xib in Resources */,
 				496505E31DDD62E000689613 /* Assets.xcassets in Resources */,
 				494BD3061DF88ABF007635F7 /* RecipeTableViewCell.xib in Resources */,
+				164E73481DFAF4D900C9BEA0 /* FavoritedTableViewCell.xib in Resources */,
+				164E73431DFAF4B700C9BEA0 /* OverviewTableViewCell.xib in Resources */,
 				496505E11DDD62E000689613 /* Main.storyboard in Resources */,
 				166AA9991DF743360033073F /* GroceryTableViewCell.xib in Resources */,
 				494A36521DF955EF000201A2 /* IngredientTableViewCell.xib in Resources */,
@@ -658,12 +679,15 @@
 				166AA9951DF686C20033073F /* GroceryViewController.swift in Sources */,
 				49B499121DFFC01B0095C0B8 /* FavoritedTableViewController.swift in Sources */,
 				166AA9981DF743360033073F /* GroceryTableViewCell.swift in Sources */,
+				164E73421DFAF4B700C9BEA0 /* OverviewTableViewCell.swift in Sources */,
 				162AEEE41DE3F7AA00FAD179 /* APIParser.swift in Sources */,
 				494A364C1DF955CD000201A2 /* ErrorMessage.swift in Sources */,
 				494BD2F41DF88AB1007635F7 /* FindRecipes.swift in Sources */,
 				494BD2FE1DF88ABA007635F7 /* Ingredient.swift in Sources */,
 				496505DE1DDD62E000689613 /* ViewController.swift in Sources */,
 				494BD3021DF88ABA007635F7 /* RecipesTableViewController.swift in Sources */,
+				164E73451DFAF4CC00C9BEA0 /* SaveRecipeViewController.swift in Sources */,
+				164E73491DFAF4D900C9BEA0 /* FavoritedTableViewController.swift in Sources */,
 				4967AA4F1DFAE98500D26D7C /* IngredientListController.swift in Sources */,
 				494BD3041DF88ABA007635F7 /* RecipeTableViewCell.swift in Sources */,
 				494BD2F01DF88AA7007635F7 /* APIViewController.swift in Sources */,
@@ -673,6 +697,7 @@
 				166AA9931DF671060033073F /* GroceryList.swift in Sources */,
 				49134FCD1DF94F7000CB78DE /* SavedRecipes.xcdatamodeld in Sources */,
 				16DC65EC1DF8BBC500AC965D /* Recipe.swift in Sources */,
+				164E734B1DFAF4E300C9BEA0 /* FavoritedTableViewCell.swift in Sources */,
 				166AA98D1DF0FAC00033073F /* RecipeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,7 +804,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -818,7 +843,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -832,7 +857,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 63GE67D6DP;
 				INFOPLIST_FILE = CookingScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingScheduler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -846,7 +873,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 63GE67D6DP;
 				INFOPLIST_FILE = CookingScheduler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CMU.CookingScheduler;
 				PRODUCT_NAME = "$(TARGET_NAME)";

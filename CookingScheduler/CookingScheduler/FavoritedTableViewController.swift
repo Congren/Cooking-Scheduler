@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Foundation
 import CoreData
 
 @available(iOS 10.0, *)
+
 class FavoritedTableViewController: UITableViewController {
 
     let errorMess = ErrorMessage()
     var recipes = [FavoritedRecipes]()
+    var ingredients:[String] = []
+    var selectedRecipe: Recipe? = nil
+    let apiClient = FindRecipe()
+    let recipeParser = RecipeParser()
+    var delegate:RecipeDetailProtocol? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
@@ -21,12 +28,6 @@ class FavoritedTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "FavoritedTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView.layoutMargins = .zero
         self.tableView.separatorInset = .zero
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,50 +69,33 @@ class FavoritedTableViewController: UITableViewController {
         return cell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let r = self.recipes[indexPath.row]
+        self.selectedRecipe = Recipe(id:Int(r.id), title:r.name!, missedIngredients:0, likes:0, imageUrl:r.imageUrl!)
+        self.performSegue(withIdentifier: "DetailFromFav", sender: self)
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "DetailFromFav") {
+            let rdvc:RecipeDetailsViewController = segue.destination as! RecipeDetailsViewController
+            rdvc.recipe = self.selectedRecipe
+            self.delegate = rdvc
+            rdvc.ingredients = self.ingredients
+            apiClient.getRecipeDetails(id: (self.selectedRecipe?.id)!) { (data) in
+                rdvc.recipeDetails = self.recipeParser.parseDetails(data: data)
+                if (self.delegate != nil) {
+                    self.delegate!.setRecipeDetails(details: rdvc.recipeDetails!)
+                }
+            }
+
+        }
     }
-    */
+
 
 }

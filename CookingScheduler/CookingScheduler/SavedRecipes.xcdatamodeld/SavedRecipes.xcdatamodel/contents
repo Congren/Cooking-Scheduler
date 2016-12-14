@@ -7,16 +7,18 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="SavedRecipes" representedClassName="SavedRecipes" syncable="YES" codeGenerationType="class">
+        <attribute name="day" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ingredientDetail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ingredients" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ingredientUnit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="meal" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="recipe" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SavedRecipes" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="FavoritedRecipes" positionX="-63" positionY="9" width="128" height="105"/>
+        <element name="SavedRecipes" positionX="-63" positionY="-18" width="128" height="180"/>
     </elements>
 </model>
