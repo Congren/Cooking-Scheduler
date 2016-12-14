@@ -23,15 +23,14 @@ class IngredientListControllerTests: XCTestCase {
     
     func testGetData(){
         let managedObjectContext = setUpInMemoryManagedObjectContext()
-        let entity = NSEntityDescription.insertNewObject(forEntityName: "SavedRecipes", into: managedObjectContext)
+        let entity = NSEntityDescription.insertNewObject(forEntityName: "GroceryListIngredients", into: managedObjectContext)
         var ingredients = ""
-        var recipes: [SavedRecipes] = []
-        var ingredientList: [String: [String]] = [:]
+        var recipes: [GroceryListIngredients] = []
         
-        entity.setValue("ingredients", forKey:"ingredients")
-        entity.setValue("instructions", forKey:"recipe")
-        entity.setValue("ingredient details", forKey:"ingredientDetail")
-        entity.setValue("ingredient units", forKey:"ingredientUnit")
+        entity.setValue("Sugar", forKey:"title")
+        entity.setValue("This is a note", forKey:"notes")
+        entity.setValue(3.0, forKey:"details")
+        entity.setValue("units", forKey:"units")
         do{
             try managedObjectContext.save()
             print("SAVED")
@@ -42,39 +41,18 @@ class IngredientListControllerTests: XCTestCase {
         }
         
         do{
-            recipes = try managedObjectContext.fetch(SavedRecipes.fetchRequest())
+            recipes = try managedObjectContext.fetch(GroceryListIngredients.fetchRequest())
+            let ivc = IngredientListController()
+            ivc.recipes = recipes
+            ivc.ingredients = ingredients
+            ivc.errorMess = ErrorMessage()
+            ivc.generateString()
+            XCTAssertEqual(ivc.ingredients, "- Sugar --- 3.0 units \("\n") \("\t")This is a note \("\n")")
         }
         catch{
             print("error")
         }
         
-        for i in recipes{
-            if let itemList = i.ingredients{
-                if let itemDetails = i.ingredientDetail{
-                    if let itemUnits = i.ingredientUnit {
-                        let itemArray = itemList.components(separatedBy: ",")
-                        let detailArray = itemDetails.components(separatedBy: ",")
-                        let unitArray = itemUnits.components(separatedBy: ",")
-                        for n in 0..<itemArray.count{
-                            if !Array(ingredientList.keys).contains(itemArray[n]){
-                                ingredientList[itemArray[n]] = []
-                                ingredientList[itemArray[n]] = [detailArray[n], unitArray[n]]
-                            }else{
-                                if let extra = Double(detailArray[n]) {
-                                    let value = Double((ingredientList[itemArray[n]]?[0])!)! + extra
-                                    ingredientList[itemArray[n]]![0] = String(value)
-                                }
-                            }
-                        }
-                    }
-                    //print(ingredientList)
-                }
-            }
-        }
-        for pair in ingredientList{
-            ingredients += pair.0 + " " + String(pair.1[0]) + " " + String(pair.1[1])
-        }
-        XCTAssertEqual(ingredients, "ingredients ingredient details ingredient units")
     }
     
     

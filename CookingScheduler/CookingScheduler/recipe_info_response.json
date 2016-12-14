@@ -1,0 +1,129 @@
+{
+  "vegetarian": false,
+  "vegan": false,
+  "glutenFree": true,
+  "dairyFree": true,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": true,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 10,
+  "gaps": "no",
+  "lowFodmap": false,
+  "ketogenic": false,
+  "whole30": false,
+  "servings": 4,
+  "preparationMinutes": 10,
+  "cookingMinutes": 25,
+  "sourceUrl": "http:\/\/www.browneyedbaker.com\/2011\/01\/19\/maple-bacon-kettle-popcorn\/",
+  "spoonacularSourceUrl": "https:\/\/spoonacular.com\/maple-bacon-kettle-popcorn-507950",
+  "aggregateLikes": 3228,
+  "spoonacularScore": 14,
+  "creditText": "Brown Eyed Baker",
+  "sourceName": "Brown Eyed Baker",
+  "extendedIngredients": [
+    {
+      "id": 10123,
+      "aisle": "Meat",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/raw-bacon.jpg",
+      "name": "bacon",
+      "amount": 4,
+      "unit": "slices",
+      "unitShort": "slices",
+      "unitLong": "slices",
+      "originalString": "4 slices bacon, cooked and grease reserved",
+      "metaInformation": [
+        "cooked"
+      ]
+    },
+    {
+      "id": 4582,
+      "aisle": "Oil, Vinegar, Salad Dressing",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/vegetable-oil.jpg",
+      "name": "cooking oil",
+      "amount": 0.25,
+      "unit": "cup",
+      "unitShort": "c",
+      "unitLong": "cups",
+      "originalString": "\u00bc cup cooking oil (use the reserved bacon grease and add extra vegetable\/canola\/olive oil to make \u00bc cup)",
+      "metaInformation": [
+
+      ]
+    },
+    {
+      "id": 11172,
+      "aisle": "Produce",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/corn.png",
+      "name": "corn kernels",
+      "amount": 0.5,
+      "unit": "cup",
+      "unitShort": "c",
+      "unitLong": "cups",
+      "originalString": "\u00bd cup corn kernels for popping",
+      "metaInformation": [
+        "for popping"
+      ]
+    },
+    {
+      "id": 19335,
+      "aisle": "Baking",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/sugar-cubes.jpg",
+      "name": "granulated sugar",
+      "amount": 3,
+      "unit": "tablespoons",
+      "unitShort": "T",
+      "unitLong": "tablespoons",
+      "originalString": "3 tablespoons granulated sugar",
+      "metaInformation": [
+
+      ]
+    },
+    {
+      "id": 19911,
+      "aisle": "Cereal",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/maple-syrup-or-agave-nectar.jpg",
+      "name": "maple syrup",
+      "amount": 1,
+      "unit": "tablespoon",
+      "unitShort": "T",
+      "unitLong": "tablespoon",
+      "originalString": "1 tablespoon maple syrup",
+      "metaInformation": [
+
+      ]
+    },
+    {
+      "id": 2047,
+      "aisle": "Spices and Seasonings",
+      "image": "https:\/\/spoonacular.com\/cdn\/ingredients_100x100\/salt.jpg",
+      "name": "salt",
+      "amount": 1.5,
+      "unit": "teaspoon",
+      "unitShort": "t",
+      "unitLong": "teaspoons",
+      "originalString": "1\u00bd teaspoon salt",
+      "metaInformation": [
+
+      ]
+    }
+  ],
+  "id": 507950,
+  "title": "Maple-Bacon Kettle Popcorn",
+  "readyInMinutes": 35,
+  "image": "https:\/\/spoonacular.com\/recipeImages\/Maple-Bacon-Kettle-Popcorn-507950.jpg",
+  "imageType": "jpg",
+  "cuisines": [
+    "american"
+  ],
+  "dishTypes": [
+    "fingerfood",
+    "antipasti",
+    "starter",
+    "snack",
+    "appetizer",
+    "antipasto",
+    "hor d'oeuvre"
+  ],
+  "pricePerServing": 51.4,
+  "instructions": "1. Fry the bacon in a skillet until brown and crisp. Remove to a paper towel-lined plate to drain and cool. Once cool, chop into small pieces and toss with the maple syrup.2. Measure out the reserved bacon grease into a measuring cup. If you don't have a \u00bc cup, add vegetable, canola or olive oil to make \u00bc cup total.3. Put the cooking grease\/oil in a large pan and add the corn kernels. Sprinkle with the sugar and 1 teaspoon of the salt. Heat the stove to medium heat, cover the pan with a tight-fitting lid and wait until you hear the first couple of kernels pop.4. Once the popping begins, use two pot holders to hold lid on the pot and shake the pot, then return to the burner. Continue to do this often throughout the popping process, every minute or two. This will help ensure that the sugar doesn't burn.5. Once the popping is done, remove the lid and salt the popcorn with the remaining \u00bd teaspoon of salt. Use a large spoon to stir the popcorn. Pour in the bacon and maple syrup mixture. Toss together and serve.Note 1: If you've never made popcorn on the stovetop you may find this tutorial helpful: How to Make Perfect Homemade Popcorn.Note 2: If you reaaallly love bacon, you will probably want to double the amount of bacon and maple syrup in this recipe. I plan to do that next time!"
+}

@@ -37,6 +37,11 @@ class NotePromptViewController: UIViewController {
     @IBAction func cancel(_ sender: Any) {
         delegate?.dismissNote()
     }
+    
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        
+        self.noteField.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 

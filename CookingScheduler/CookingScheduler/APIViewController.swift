@@ -55,6 +55,9 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
             }
         }
     }
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        self.ingredientField.resignFirstResponder()
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         ingredients.append(textField.text!)
@@ -64,6 +67,7 @@ class APIViewController: UIViewController, UITextFieldDelegate, UITableViewDeleg
             IndexPath(row: ingredients.count-1, section: 0)
             ], with: .top)
         self.tableView.endUpdates()
+        textField.resignFirstResponder()
         return true
     }
     

@@ -62,8 +62,7 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, Saved
             self.instructionsLabel.text = temp
         }
         groceryList = GroceryList(ingredientsOwned:ingredients,recipeIngredients: (self.recipeDetails?.ingredients)! )
-        let neededIngredients = groceryList?.compareIngredients()
-        print(neededIngredients ?? "Did not work")
+        _ = groceryList?.compareIngredients()
     }
     
     
@@ -109,13 +108,34 @@ class RecipeDetailsViewController: UIViewController, RecipeDetailProtocol, Saved
         newRecipe.setValue(meal, forKey: "meal")
         do{
             try context.save()
-            print("SAVED")
+            saveGroceryList()
+        }
+        catch{
+            self.present(errorMess.createErrorMessage(title: "Favorite Failed", message: "Something went wrong. Please Try Again"), animated: true, completion: nil)
+        }
+        
+    }
+    
+    func saveGroceryList() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        for ing in (self.groceryList?.neededIngredients)! {
+            let newIngredient = NSEntityDescription.insertNewObject(forEntityName: "GroceryListIngredients", into: context)
+            newIngredient.setValue(ing.name, forKey:"title")
+            newIngredient.setValue(ing.id, forKey:"id")
+            newIngredient.setValue(ing.notes ?? "No Notes", forKey: "notes")
+            newIngredient.setValue(ing.ingredientUnits, forKey:"units")
+            newIngredient.setValue(ing.ingredientDetails, forKey: "details")
+        }
+        
+        do{
+            try context.save()
             self.present(errorMess.createErrorMessage(title: "Saved!", message: "You have Saved this Recipe!"), animated: true, completion: nil)
         }
         catch{
-            print("Error")
-            self.present(errorMess.createErrorMessage(title: "Favorite Failed", message: "Something went wrong. Please Try Again"), animated: true, completion: nil)
+            self.present(errorMess.createErrorMessage(title: "Favorite Failed", message: "Something went wrong. You Have Saved the Recipe but not the Ingredients"), animated: true, completion: nil)
         }
+
     }
 
     // MARK: - Navigation

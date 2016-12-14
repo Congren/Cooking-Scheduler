@@ -10,12 +10,10 @@ import Foundation
 
 class FindRecipe {
     func getRecipe(ingredients: NSArray, completion: @escaping (NSData?) -> Void){
-        let numReplies = 1
         let ingredientsStr = makeString(array: ingredients)
         print(ingredientsStr)
         let urlString = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?fillIngredients=false&ingredients=\(ingredientsStr)&limitLicense=false&number=20&ranking=1"
         guard let url = NSURL(string: urlString) else {
-            print("Error: couldn't create URL from string")
             completion(nil)
             return
         }
@@ -25,17 +23,13 @@ class FindRecipe {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
         let session = URLSession.shared
-        print (ingredients)
         let task = session.dataTask(with: request) { data, response, error in
-            print ("before error")
             if let error = error {
-                print("Error fetching repositories: \(error)")
                 completion(data as NSData?)
                 return
             }
-            
+            print("This data: ")
             print(data!)
-            print("about to hit completion")
             completion(data as NSData?)
         }
         
@@ -49,7 +43,6 @@ class FindRecipe {
     func getRecipeDetails(id:Int, completion: @escaping (NSData?) -> Void) {
         let urlStrign = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/\(String(id))/information"
         guard let url = NSURL(string: urlStrign) else {
-            print("Error: couldn't create URL from string")
             completion(nil)
             return
         }
@@ -61,11 +54,9 @@ class FindRecipe {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             if let error = error {
-                print("Error fetching repositories: \(error)")
                 completion(data as NSData?)
                 return
             }
-            print(data!)
             completion(data as NSData?)
         }
         

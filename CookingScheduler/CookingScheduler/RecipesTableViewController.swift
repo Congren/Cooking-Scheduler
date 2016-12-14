@@ -29,6 +29,7 @@ class RecipesTableViewController: UITableViewController,DataFromAPI {
     var delegate:RecipeDetailProtocol? = nil
     var noRecipesDelegate:NoRecipesDelegate? = nil
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "RecipeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")

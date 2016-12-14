@@ -51,13 +51,18 @@ class RecipeParser {
     }
     
     func getIngredient(info: Dictionary<String, Any>) -> Ingredient? {
-        if let id = info["id"] as? Int,
-            let name = info["name"] as? String,
+            if let name = info["name"] as? String,
             let ingredientInfo = (info["amount"]! as AnyObject).doubleValue,
             let ingredientUnit = info["unit"] as? String{
-            return Ingredient(id:id, name:name, notes: nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
+                if let id = info["id"] as? Int {
+                    return Ingredient(id:id, name:name, notes: nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
+                } else {
+                    return Ingredient(id:-1, name:name, notes:nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
+                }
+
+        } else {
+                return Ingredient(id:-1, name:"Error", notes:nil, ingredientDetails: -1, ingredientUnits:"error")
         }
-        return nil
     }
     
     func createRecipe(info:Dictionary<String, Any>) -> Recipe?{

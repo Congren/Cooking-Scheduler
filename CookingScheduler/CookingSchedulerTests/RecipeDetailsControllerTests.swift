@@ -22,15 +22,18 @@ class RecipeDetailsControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSetRecipeDetails(){
-        let ingredientOne = Ingredient(id:1, name:"Broccoli", notes: nil, ingredientDetails: 5.0, ingredientUnits: "Ounce")
-        let ingredientTwo = Ingredient(id:2, name:"Chedder", notes: nil, ingredientDetails: 1.0, ingredientUnits: "Slices")
-        let ingredientArray = [ingredientOne, ingredientTwo]
-        let cuisineArray : [String] = ["Meat", "Bread"]
-        let recipeTest = RecipeDetails(id:1, title:"Cooking", cookTime:15, instructions: "Test", ingredients:ingredientArray, cuisines:cuisineArray, url:"Fake Url")
-        let rdc = RecipeDetailsViewController()
-        //rdc.setRecipeDetails(details: recipeTest)
-        //print(rdc.instructionsLabel.text)
-    }
+//    func testSetRecipeDetails(){
+//        let ingredientOne = Ingredient(id:1, name:"Chilled Broccoli", notes: nil, ingredientDetails: 5.0, ingredientUnits: "Ounce")
+//        let ingredientTwo = Ingredient(id:2, name:"Chedder", notes: nil, ingredientDetails: 1.0, ingredientUnits: "Slices")
+//        let ingredientArray = [ingredientOne, ingredientTwo]
+//        let cuisineArray : [String] = ["Meat", "Bread"]
+//        let recipeTest = RecipeDetails(id:1, title:"Cooking", cookTime:15, instructions: "Test", ingredients:ingredientArray, cuisines:cuisineArray, url:"Fake Url")
+//        let rdc = RecipeDetailsViewController()
+//        rdc.recipeDetails = recipeTest
+//        rdc.ingredients = ["Broccoli"]
+//        
+//        rdc.setRecipeDetails(details: recipeTest)
+//        print(rdc.instructionsLabel.text)
+//    }
     
 }

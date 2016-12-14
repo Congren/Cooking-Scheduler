@@ -11,9 +11,8 @@ import UIKit
 @available(iOS 10.0, *)
 class IngredientListController: UIViewController {
     var ingredients = ""
-    var recipes: [SavedRecipes] = []
-    var ingredientList: [String: [String]] = [:]
-    //var ingredientInfos: [String] = []
+    var recipes: [GroceryListIngredients] = []
+    var errorMess = ErrorMessage()
 
     @IBOutlet weak var textView: UITextView!
     
@@ -23,48 +22,26 @@ class IngredientListController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    func generateList(){
+    func generateList() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         do{
-            recipes = try context.fetch(SavedRecipes.fetchRequest())
+            recipes = try context.fetch(GroceryListIngredients.fetchRequest())
+            generateString()
+            
         }
         catch{
-            print("error")
+            self.present(errorMess.createErrorMessage(title: "Grocery List Failed", message: "Something went wrong. We were unable to create a Grocery List."), animated: true, completion: nil)
         }
-        
-        for i in recipes{
-            if let itemList = i.ingredients{
-                if let itemDetails = i.ingredientDetail{
-                    if let itemUnits = i.ingredientUnit {
-                        let itemArray = itemList.components(separatedBy: ",")
-                        let detailArray = itemDetails.components(separatedBy: ",")
-                        let unitArray = itemUnits.components(separatedBy: ",")
-                        for n in 0..<itemArray.count{
-                            if !Array(ingredientList.keys).contains(itemArray[n]){
-                                ingredientList[itemArray[n]] = []
-                                ingredientList[itemArray[n]] = [detailArray[n], unitArray[n]]
-                            }else{
-                                if let extra = Double(detailArray[n]) {
-                                    let value = Double((ingredientList[itemArray[n]]?[0])!)! + extra
-                                    ingredientList[itemArray[n]]![0] = String(value)
-                                }
-                            }
-                        }
-                    }
-                    //print(ingredientList)
-                }
-            }
-        }
-        for pair in ingredientList{
-            ingredients += pair.0 + "      ---     " + String(pair.1[0]) + " " + String(pair.1[1]) + "\n"
-        }
-        print(ingredientList)
-        //ingredients += item.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) + "\n"
         
         textView.text = ingredients
+    }
+    
+    func generateString() {
+        for i in recipes{
+            ingredients = ingredients + "- \(i.title!) --- \(String(i.details)) \(i.units!) \("\n") \("\t")\(i.notes ?? "No Notes") \("\n")"
+        }
 
-        
     }
     
 

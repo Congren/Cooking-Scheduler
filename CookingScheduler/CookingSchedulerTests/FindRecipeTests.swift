@@ -27,27 +27,4 @@ class FindRecipeTests: XCTestCase {
         XCTAssertEqual(test, "Meat%2CPotatoes")
     }
     
-    func testGetRecipe(){
-        let fr = FindRecipe()
-        let ingredients = ["Meat", "Potatoes", "Cheese"]
-        let rp = RecipeParser()
-        fr.getRecipe(ingredients: ingredients as NSArray){ NSData in
-            let json = rp.parseDictionary(data: NSData)
-            print ("this is")
-            print (json)
-            
-        }
-        //XCTAssertTrue()
-        
-    }
-    
-    func testGetRecipeDetails(){
-        let fr = FindRecipe()
-        let rp = RecipeParser()
-        fr.getRecipeDetails(id: 3235){ NSData in
-            let json = rp.parseDictionary(data: NSData)
-            print (json)
-        }
-    }
-    
 }

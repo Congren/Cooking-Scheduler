@@ -20,10 +20,8 @@ class GroceryViewControllerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-//    func getGroceryList(data: GroceryList) {
-//        self.groceryList = data
-//        self.tableView.reloadData()
-//    }
+
+    
     func testGetGroceryList(){
         let gl = GroceryViewController()
         let ingredientOne = Ingredient(id:1, name:"Broccoli", notes: nil, ingredientDetails: 5.0, ingredientUnits: "Ounces")
