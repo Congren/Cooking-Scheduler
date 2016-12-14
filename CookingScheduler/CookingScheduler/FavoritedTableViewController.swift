@@ -34,13 +34,18 @@ class FavoritedTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+        self.tableView.reloadData()
+    }
 
     func getData() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do{
             recipes = try context.fetch(FavoritedRecipes.fetchRequest())
         }catch{
-            print("oh no")
             self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorry we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
         }
     }
