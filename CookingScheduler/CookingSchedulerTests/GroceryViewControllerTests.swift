@@ -33,6 +33,8 @@ class GroceryViewControllerTests: XCTestCase {
         let groceries = GroceryList(ingredientsOwned: ["Meat", "Potatoes"], recipeIngredients: ingredientArray)
         gl.getGroceryList(data: groceries)
         XCTAssertEqual(gl.groceryList!.ingredientsOwned, groceries.ingredientsOwned)
+        XCTAssertEqual(gl.groceryList!.ingredientsOwned.count, groceries.ingredientsOwned.count)
+
     }
     
 }

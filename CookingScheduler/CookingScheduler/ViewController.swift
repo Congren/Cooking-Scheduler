@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
             catch{
                 print("Fetching failed")
-                self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorr we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
+                self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorry we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
             }
         }
         tableView.reloadData()
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             recipes = try context.fetch(SavedRecipes.fetchRequest())
         }catch{
             print("oh no")
-             self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorr we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
+             self.present(errorMess.createErrorMessage(title: "Fetch Failed", message: "Sorry we couldn't retrieve your recipes. Try Again"),animated: true, completion: nil)
         }
     }
     

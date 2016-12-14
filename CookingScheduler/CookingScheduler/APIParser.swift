@@ -45,17 +45,19 @@ class RecipeParser {
             let ingredientsList = info["extendedIngredients"] as! NSArray
             let url = info["spoonacularSourceUrl"] as? String ?? "No URL"
             let ingredients = ingredientsList.map({getIngredient(info: $0 as! Dictionary<String, Any>)})
-            return RecipeDetails(id:id, title:title, cookTime:cookTime!, instructions: instructions ?? "No Data Available", ingredients:ingredients, cuisines:cuisines!, url:url)
+            return RecipeDetails(id:id, title:title, cookTime:cookTime!, instructions: instructions ?? "No Data Available", ingredients:ingredients as! [Ingredient], cuisines:cuisines! , url:url)
         }
         return nil
     }
     
-    func getIngredient(info: Dictionary<String, Any>) -> Ingredient {
-        let id = info["id"] as? Int ?? -1
-        let name = info["name"] as? String ?? "No Name"
-        let ingredientInfo = (info["amount"]! as AnyObject).doubleValue ?? 0.0
-        let ingredientUnit = info["unit"] as? String ?? "N/A"
-        return Ingredient(id:id, name:name, notes: nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
+    func getIngredient(info: Dictionary<String, Any>) -> Ingredient? {
+        if let id = info["id"] as? Int,
+            let name = info["name"] as? String,
+            let ingredientInfo = (info["amount"]! as AnyObject).doubleValue,
+            let ingredientUnit = info["unit"] as? String{
+            return Ingredient(id:id, name:name, notes: nil, ingredientDetails: ingredientInfo, ingredientUnits: ingredientUnit)
+        }
+        return nil
     }
     
     func createRecipe(info:Dictionary<String, Any>) -> Recipe?{

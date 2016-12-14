@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FavoritedRecipes+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:FavoritedRecipes+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SavedRecipes+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SavedRecipes+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CookingScheduler.xcodeproj">
    </FileRef>
    <FileRef

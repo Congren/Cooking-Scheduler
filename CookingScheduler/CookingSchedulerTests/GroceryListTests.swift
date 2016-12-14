@@ -31,6 +31,7 @@ class GroceryListTests: XCTestCase {
         let testNeeded = ingredientOne.name
         let neededName = neededIngredients[0].name
         XCTAssertTrue(neededName == testNeeded)
+        XCTAssertTrue(neededIngredients.count == 1)
     }
     
 }

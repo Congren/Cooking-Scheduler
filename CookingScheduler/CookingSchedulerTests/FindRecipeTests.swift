@@ -31,8 +31,9 @@ class FindRecipeTests: XCTestCase {
         let fr = FindRecipe()
         let ingredients = ["Meat", "Potatoes", "Cheese"]
         let rp = RecipeParser()
-        fr.getRecipe(ingredients: ingredients as NSArray){ (data) in
-            let json = rp.parseDictionary(data: data)
+        fr.getRecipe(ingredients: ingredients as NSArray){ NSData in
+            let json = rp.parseDictionary(data: NSData)
+            print ("this is")
             print (json)
             
         }
@@ -43,8 +44,8 @@ class FindRecipeTests: XCTestCase {
     func testGetRecipeDetails(){
         let fr = FindRecipe()
         let rp = RecipeParser()
-        fr.getRecipeDetails(id: 3235){ (data) in
-            let json = rp.parseDictionary(data: data)
+        fr.getRecipeDetails(id: 3235){ NSData in
+            let json = rp.parseDictionary(data: NSData)
             print (json)
         }
     }
